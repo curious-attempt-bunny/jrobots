@@ -1,0 +1,242 @@
+<HTML><HEAD>
+
+<TITLE>Leonardo Boselli's JROBOTS</TITLE>
+
+<META NAME="KeyWords" CONTENT="virtual, reality, artificial, intelligence, physics, systems, java, applets, on-line, games"></HEAD>
+
+<BODY Bgcolor="black" Text=#ffffff Link=#ffc00 VLink=#ffc00 ALink=#f1e2f3 
+      topmargin=0 leftmargin=0 rightmargin=0 bottommargin=0>
+
+
+<!--------------- HEADER ------------------------->
+
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR align=left width="100%">
+     <TD align=left><img border=0 
+      src="gfx/titlebg_1.jpg"></td>
+    <TD align=right width="100%" valign=middle background="gfx/titlebg_2.jpg"> </TD></TR></TBODY></TABLE>
+<table border=1 bordercolor="black" cellpadding=0 cellspacing=0 bgcolor=78398D width=100%><tr><td>
+<font color=white size=2 face= verdana,arial><center>Multi-User, Time-Sharing, Real-Time Java Algorithms Challenge</center></font>
+</td></tr></table>
+
+<!--------------- Main Table --------------------->
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 HEIGHT=100% WIDTH=100% bgcolor=695246>
+  <TR><TD VALIGN=TOP ALIGN=CENTER>
+
+<!---------------- Menu Table -------------------->
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=6 WIDTH=100% height=100%>
+  <TR><TD VALIGN=TOP ALIGN=center WIDTH=150 valign=top height=100%>
+    
+    <TABLE BORDER=0 CELLPADDING=0 WIDTH=150 height=100%>
+<!---------- Start of menu ------------>
+			<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%" height=100%>
+			 <TR valign=bottom><td valign=bottom>
+  			  <table cellpadding=0 border=0 cellspacing=0><tr valign=top><td valign=top><img
+                    src="gfx/menu_top.gif" alt="" width=150></td></tr>
+	    		<tr><td background="gfx/menu_bk.gif">&nbsp;</td></tr></table>
+			 </td</tr> 
+			 <tr height=100%><td background="gfx/menu_bk.gif" valign=top>
+                   <CENTER><FONT face="Arial, Helvetica, Geneva" size=2></center>
+
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_info.html">Info</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_faq.html">FAQ</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_tutorials.html">Tutorials</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://www.onelist.com/group/javajousters">Mailing List</A><br>
+
+<br><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/accounts.shtml">Accounts</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/uploads.shtml">Uploads</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/downloads.shtml">Downloads</A><br>
+
+<br><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_match.html"><b>Battle Applet</b></A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/jjr_contests.shtml">Challenges</A><br>
+<br><br><center>
+<a href="http://www.jars.com/classes/jresout.cgi?resource=6808"><img src="jars_75.gif" alt="JARS Top 25%" align=center border=0></a><br></center>
+
+</FONT>
+   
+</td></tr>
+			<tr height=100%><td height=100% background="gfx/menu_bk.gif"><br><br>
+                  <img src="gfx/menu_bk.gif" alt="" height=100% width=150></td></tr>
+			<tr valign=top><td valign=top><img src="gfx/menu_bot.gif" alt="" width=150></td>
+                  </tr></table>
+<!---------- End of menu --------->
+
+  </TD>
+
+<!------------------ Text Table ------------------>
+
+
+<TD VALIGN=TOP ALIGN=CENTER>
+
+<TABLE BORDER=1 BGCOLOR="#1F0635" border color="black" cellpadding=8 cellspacing=0><TR><TD>
+
+<!--------------------------------------------------->
+<!-------- Changes should be done here only --------->
+<!--------------------------------------------------->
+
+<FONT FACE="verdana,arial" size=-1>
+
+<A NAME="index">
+<P ALIGN=CENTER><FONT COLOR=yellow SIZE=+1>Jrobots FAQ</FONT><br><center><font size=-1><A HREF="jjr_faq.html">[English]</a>&nbsp[Italiano]&nbsp<A HREF="jjr_faqSpa.html">[Español]</a></font></center>
+
+<hr>
+
+<font color=yellow><B>UPLOADS</B></font>
+
+<ol>
+
+<li><a href="#2">
+Per aggiungere un nuovo Jrobot &egrave; necessario ricompilare il programma Java aggiungendo i nuovi file?
+</a><p>
+
+<li><a href="#1">
+Se miglioro il mio robot come faccio ad inviare la nuova versione?<br>Posso usare un file con lo stesso nome o devo cambiarlo?
+</a><p>
+
+<li><a href="#7">
+Ho seguito tutte le regole, ma il CGI degli Upload rifiuta il mio robot. Perch&eacute;?
+</a><p>
+
+<li><a href="#6">
+Ho mandato un robot al vostro sito ed ora posso vederlo nella lista, ma, quando lo seleziono per vederlo combattere, non appare nell'arena. Perch&eacute;?
+</a><p>
+
+</ol>
+
+<font color=yellow><B>DEVELOPMENT</B></font>
+
+<ol>
+
+<li><a href="#4">
+Perch&eacute; l'arena non segue le normali convenzioni sulle coordinate e gli angoli?
+</a><p>
+
+<li><a href="#5">
+Come posso effettuare il debugging del mio robot per vedere cosa avviene nel mio codice?
+</a><p>
+
+<li><a href="#3">
+Quando un robot viene disabilitato non &egrave; possibile fare in modo che il simulatore chiami il metodo finalize() di quel robot? Questa &egrave; un'opzione che mi sarebbe molto utile perch&eacute; uso delle variabili statiche che vengono incrementate quando i robot vengono creati.
+</a><p>
+
+</ol>
+
+<hr>
+
+<font color=yellow><B>UPLOADS</B></font>
+
+<ol>
+
+<li><a name="2"></a><font color=yellow><B>D:</B></font> <B>
+Per aggiungere un nuovo Jrobot &egrave; necessario ricompilare il programma Java aggiungendo i nuovi file?
+</B><p><font color=yellow><B>R:</B> </font>
+No. Puoi compilare e testare il tuo robot usando il package off-line. Poi invii il file al sito e viene automaticamente riconosciuto dall'applet che simula i tornei.
+<p>
+
+<li><a name="1"></a><font color=yellow><B>D:</B></font> <B>
+Se miglioro il mio robot come faccio ad inviare la nuova versione?<br>Posso usare un file con lo stesso nome o devo cambiarlo?
+</B><p><font color=yellow><B>R:</B> </font>
+Manda un file con lo stesso nome. Il vecchio file viene sovrascritto ed il nuovo robot eredita i risultati dei suoi predecessori.<br>Se scegli un altro nome, il nuovo robot combatter&agrave; contro quello vecchio.
+<p>
+
+<li><a name="7"></a><font color=yellow><B>D:</B></font> <B>
+Ho seguito tutte le regole, ma il CGI degli Upload rifiuta il mio robot. Perch&eacute;?
+</B><p><font color=yellow><B>R:</B> </font>
+<B>Caso 1</B> Hai inserito nel codice un blocco try-catch, cos&igrave; nel file compare la classe <I>java.lang.Exception</I>. Hai violato la regola: "<I>Non &egrave; possibile utilizzare le classi delle API Java nel codice dei robot</I>"
+<br><B>Caso 2</B> Hai usato la classe <I>java.lang.Math</I> per ricavare la costante pi greco ed hai violato la regola : "<I>Non &egrave; possibile utilizzare le classi delle API Java nel codice dei robot</I>". In alternativa puoi definire tu stesso la costante pi greco.
+<p>
+
+<li><a name="6"></a><font color=yellow><B>D:</B></font> <B>
+Ho mandato un robot al vostro sito ed ora posso vederlo nella lista, ma, quando lo seleziono per vederlo combattere, non appare nell'arena. Perch&eacute;?
+</B><p><font color=yellow><B>R:</B> </font>
+<B>Caso 1</B> I robot non possono usare le <I>inner classes</I>, mi dispiace. Tutti gli algoritmi devono essere contenuti in una sola classe. Il tuo robot utilizza due classi <I>MyRobot.class</I> e <I>MyRobot$1.class</I>. Tu puoi inviare una sola classe e quindi <i>MyRobot$1</i> non &egrave; disponibile nella versione on-line e viene generata un'eccezione.
+<p>
+
+</ol>
+
+<br><font color=#0000ff><B>DEVELOPMENT</B></font><br>
+
+<ol>
+
+<li><a name="4"></a><font color=yellow><B>D:</B></font> <B>
+Perch&eacute; l'arena non segue le normali convenzioni sulle coordinate e gli angoli?
+</B><p><font color=yellow><B>R:</B> </font>
+Per rendere pi&ugrave; veloce l'esecuzione su macchine lente, dato che i calcoli sono pi&ugrave; semplici. Questo non &egrave; un problema perch&eacute; i robot non possono vedere l'applet e puoi immaginare di osservare l'applet da "sotto" <B>;-)</B>
+<p>
+
+<li><a name="5"></a><font color=yellow><B>D:</B></font> <B>
+Come posso effettuare il debugging del mio robot per vedere cosa avviene nel mio codice?
+</B><p><font color=yellow><B>R:</B> </font>
+Se usi il JDK e l'appletviewer, &egrave; molto semplice. Per esempio puoi usare questo codice per stampare sullo schermo una variabile  ('a' &egrave; una variabile intera o qualsiasi altra cosa):
+<pre>System.out.println(&quot;the value of 'a' is: &quot;+a);</pre>
+In questo modo utilizzi una delle classi Java per stampare sullo stream di output in una finestra DOS. La GUI dell'applet non subisce modifiche.<br><B>Ricorda</B> di rimuovere tutte queste linee quando invii il robot corretto: altrimenti il CGI degli Upload lo rifiuter&agrave;.<br>Se non usi il JDK ed il suo compilatore a linea di comando, ma un'IDE pi&ugrave; complessa, il debug dipende dall'IDE e non posso esserti di aiuto.
+<p>
+
+<li><a name="3"></a><font color=yellow><B>D:</B></font> <B>
+Quando un robot viene disabilitato non &egrave; possibile fare in modo che il simulatore chiami il metodo finalize() di quel robot? Questa &egrave; un'opzione che mi sarebbe molto utile perch&eacute; uso delle variabili statiche che vengono incrementate quando i robot vengono creati.
+</B><p><font color=yellow><B>R:</B> </font>
+Il metodo finalize() pu&ograve; minare la sicurezza dell'applet. Questo metodo deve essere richiamato dal thread principale quando un robot viene disabilitato, cos&igrave; il thread passa il controllo al codice del robot. Qualcuno potrebbe inserire un loop infinito in finalize() per bloccare l'esecuzione e evitare un risultato negativo.<br>Per identificare i robot usa il metodo <B>id()</B> all'inizio del metodo <B>main()</B>. Fornisce un unico identificativo ad ogni robot seguendo l'ordine di creazione.
+<p>
+
+</ol>
+
+<hr><p>Per altre domande <A HREF="mailto:boselli@uno.it">mandatemi un email</A>.
+
+</FONT>
+<!--------------------------------------------------->
+<!-------- End of Text. No More changes! ------------>
+<!--------------------------------------------------->
+
+
+</td></tr></table>
+
+ </TD></TR></TABLE>
+
+  </TD></TR>
+
+<!-------------------- FOOTER ---------------------->
+
+
+<TR><TD>
+
+<table border=1 bordercolor="black" cellpadding=5 cellspacing=0 bgcolor=78398D width=100%>
+<tr><td align=center>
+    <TABLE WIDTH=100% CELLPADDING=0 BORDER=0 CELLSPACING=0>
+    <TR><TD width=50% ALIGN=LEFT>
+<font color=white size=1 face=verdana,arial>For more information<BR>send an <A HREF="mailto:tetractys@uno.it">email</A> to<BR><A HREF="http://www.uno.it/utenti/tetractys/">TETRACTYS Software</A></FONT>
+    </TD><TD ALIGN=RIGHT VALIGN=CENTER width=50%>
+<font color=white size=1 face=verdana,arial>Copyright &copy; 1999-2005 <a href="mailto:boselli@uno.it">Leonardo Boselli</a><BR>All Rights Reserved. <a href="copyright.html">Legal Terms</a>.</FONT>
+    </TD></TR>
+    </TABLE>
+
+</td></tr></table>
+
+
+  </TD></TR> 
+  </TABLE>
+</BODY>
+</HTML>
+

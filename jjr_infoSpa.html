@@ -1,0 +1,485 @@
+<HTML><HEAD>
+
+<TITLE>Leonardo Boselli's JROBOTS</TITLE>
+
+<META NAME="KeyWords" CONTENT="virtual, reality, artificial, intelligence, physics, systems, java, applets, on-line, games"></HEAD>
+
+<BODY Bgcolor="black" Text=#ffffff Link=#ffc00 VLink=#ffc00 ALink=#f1e2f3 
+      topmargin=0 leftmargin=0 rightmargin=0 bottommargin=0>
+
+
+
+<!--------------- HEADER ------------------------->
+
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR align=left width="100%">
+     <TD align=left><img border=0 
+      src="gfx/titlebg_1.jpg"></td>
+    <TD align=right width="100%" valign=middle background="gfx/titlebg_2.jpg"> </TD></TR></TBODY></TABLE>
+<table border=1 bordercolor="black" cellpadding=0 cellspacing=0 bgcolor=78398D width=100%><tr><td>
+<font color=white size=2 face= verdana,arial><center>Multi-User, Time-Sharing, Real-Time Java Algorithms Challenge</center></font>
+</td></tr></table>
+
+<!--------------- Main Table --------------------->
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 HEIGHT=100% WIDTH=100% bgcolor=695246>
+  <TR><TD VALIGN=TOP ALIGN=CENTER>
+
+<!---------------- Menu Table -------------------->
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=6 WIDTH=100% height=100%>
+  <TR><TD VALIGN=TOP ALIGN=center WIDTH=150 valign=top height=100%>
+    
+    <TABLE BORDER=0 CELLPADDING=0 WIDTH=150 height=100%>
+<!---------- Start of menu ------------>
+			<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%" height=100%>
+			 <TR valign=bottom><td valign=bottom>
+  			  <table cellpadding=0 border=0 cellspacing=0><tr valign=top><td valign=top><img
+                    src="gfx/menu_top.gif" alt="" width=150></td></tr>
+	    		<tr><td background="gfx/menu_bk.gif">&nbsp;</td></tr></table>
+			 </td</tr> 
+			 <tr height=100%><td background="gfx/menu_bk.gif" valign=top>
+                   <CENTER><FONT face="Arial, Helvetica, Geneva" size=2></center>
+
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_info.html">Info</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_faq.html">FAQ</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_tutorials.html">Tutorials</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://www.onelist.com/group/javajousters">Mailing List</A><br>
+
+<br><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/accounts.shtml">Accounts</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/uploads.shtml">Uploads</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/downloads.shtml">Downloads</A><br>
+
+<br><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_match.html"><b>Battle Applet</b></A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/jjr_contests.shtml">Challenges</A><br>
+<br><br><center>
+<a href="http://www.jars.com/classes/jresout.cgi?resource=6808"><img src="jars_75.gif" alt="JARS Top 25%" align=center border=0></a><br></center>
+
+</FONT>
+   
+</td></tr>
+			<tr height=100%><td height=100% background="gfx/menu_bk.gif"><br><br>
+                  <img src="gfx/menu_bk.gif" alt="" height=100% width=150></td></tr>
+			<tr valign=top><td valign=top><img src="gfx/menu_bot.gif" alt="" width=150></td>
+                  </tr></table>
+<!---------- End of menu --------->
+
+  </TD>
+
+<!------------------ Text Table ------------------>
+
+
+<TD VALIGN=TOP ALIGN=CENTER>
+
+<TABLE BORDER=1 BGCOLOR="#1F0635" border color="black" cellpadding=8 cellspacing=0><TR><TD>
+
+<!--------------------------------------------------->
+<!-------- Changes should be done here only --------->
+<!--------------------------------------------------->
+
+<FONT FACE="verdana,arial" SIZE=-1>
+
+<A NAME="index">
+<P ALIGN=CENTER><FONT COLOR=yellow SIZE=+1>Jrobots Info</FONT><br><center><font size=-1><A HREF="jjr_info.html">[English]</a>&nbsp<A HREF="jjr_infoIta.html">[Italiano]</a>&nbsp[Español]</font></center>
+<hr>
+
+      <UL>
+        <LI><a href="#Que es Jrobots">Qué es Jrobots?</a><UL>
+          <LI><a href="#intro">Introducción</a> 
+
+          <LI><a href="#Los Robots y el Campo de Batalla">Los Robots y el Campo de Batalla
+          </a> 
+          <UL>
+            <LI><a href="#arena">Arena</a> 
+
+            <LI><a href="#matches">Combates</a><LI><a href="#engine">Motor</a> 
+
+            <LI><a href="#cannon">Cañón</a> 
+
+            <LI><a href="#missiles">Misiles</a> 
+
+            <LI><a href="#scanner">Radar</a> 
+            </LI></UL></LI></UL>
+        <LI><a name="develop" href="#Como puedo desarrollar un robot">Cómo puedo desarrollar un robot?
+        </a> 
+        <UL>
+          <LI><a href="#lang">El lenguaje de programación (Java) </a> 
+          <LI><a href="#Reglas y limitaciones">Reglas y limitaciones</a> 
+          <LI><a href="#Funciones disponibles">Funciones disponibles</a> 
+          <UL>
+            <LI><a href="#cannon">cannon</a> 
+
+            <LI><a href="#damage">damage</a> 
+
+            <LI><a href="#drive">drive</a> 
+
+            <LI><a href="#scan">scan</a> 
+            <LI><a href="#loc_x">loc_x</a> 
+
+            <LI><a href="#loc_y">loc_y</a> 
+
+            <LI><a href="#speed">speed</a> 
+
+            <LI><a href="#time">time</a> 
+            <LI><a href="#id">id</a> 
+            <LI><a href="#math">Math</a> 
+            </LI></UL>
+          <LI><a href="#Extensiones a las funciones básicas">Extensiones a las 
+          funciones básicas</a></LI></UL>
+        <LI><a href="#send">Cómo puedo enviar mi Jrobot para combatir con otros robots?
+        </a> 
+        <UL>
+          <LI><a href="#Apertura de cuenta">Apertura de cuenta</a> 
+          <LI><a href="#upl">Carga</a></LI></UL>
+        <LI><a href="#Como puedo convertir mi viejo Crobot en un nuevo Jrobot">
+        Cómo puedo convertir mi viejo Crobot en un nuevo Jrobot? </a> 
+        <UL>
+          <LI><a href="#Conversion">Conversión</a> 
+          </LI></UL>
+        <LI><a href="#app">Apéndices </a> 
+        <UL>
+          <LI><a href="#weighted">La regla de selección de oponentes</a><LI>
+          <a href="#clock">El generador de tiempo virtual </a> </LI></UL></LI></UL>
+      <HR>
+
+      <P><a name="Que es Jrobots"><font color="yellow"><b>Qué es Jrobots?</b></font></a><P>
+    Los siguientes párrafos 
+    describen el propósito y las principales características del juego. 
+      <P><B><A name=intro>Introducción</A></B>
+      <P><B>Jrobots</B> es un clone de <B>Crobots</B>, un viejo juego para DOS 
+      escrito por Tom Poindexter en 1985. Hay un conjunto de robots que pelean 
+      en una arena, disparando misiles y tratando de evitar los proyectiles 
+      enemigos. Este juego es muy atrapante e interesante, aunque no es interactivo. Primero 
+      debes desarrollar algoritmos para tu robot en un lenguaje de programación 
+      en particular, y luego debes  cargarlo en la Arena para visualizar en forma on-line sus peleas contra otros robots. No lo puedes ayudar, los robots 
+      combaten solos, por lo que tu debes enseñarle las técnicas de combate para 
+      sobrevivir.<P>Para ver algunos robots combatiendo, puedes ir a: <A href="jjr_match.shtml">Match Applet 
+      page</A>. 
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <P><b><a name="Los Robots y el Campo de Batalla">Los Robots y el Campo de Batalla</a></b><P>Los siguientes párrafos 
+    describen las características de los robots y el campo de batalla. Para 
+    desarrollar tu propio robot debes conocer los siguiente: 
+      <H5><A name=arena>Arena</A></H5>El campo de batalla es un cuadrado de 
+      1 Km (1000 metros) de lado. Cuando un robot choca contra las paredes del 
+    cuadrado, recibe 2 puntos de daño sobre un total de 100, y el motor se 
+    detiene. No es lo peor que le puede pasar, pero no es nada bueno, así que 
+    debes evitar las paredes. Cuando un robot alcanza los 100 puntos de daño, es 
+    destruido y pierde el juego.<P>
+    <a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><a name="matches">Combates</a></H5>Hay tres tipos de juego:<OL>
+        <LI><B>Single Match</B>: Dos robots enemigos combatiendo uno contra otro. 
+        <LI><B>Double Match</B>: Dos equipos de dos robots cada uno, combatiendo 
+        uno contra el otro. Este tipo de juego es más difícil que el anterior, 
+        porque no es tan simple distinguir amigos de enemigos. 
+        <LI><B>Team Match</B>: Cuatro equipos de ocho robots, cada equipo 
+        peleando contra todos los otros. </LI></OL>Todos los combates duran un 
+    máximo de 180 segundos. El robot o el equipo que destruye todos los robots 
+    enemigos de la Arena, gana. 
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><a name="engine">Motor</a></H5>Los robots tienen un motor y pueden 
+    moverse por cualquier lado del campo de batalla. La velocidad máxima de los 
+    robots es de 
+      30&nbsp;m/s (metros por segundo), por ej: 100&nbsp;Km/h, y la aceleración 
+    es de 5&nbsp;m/s<SUP>2</SUP>. Esto significa que un robot necesita seis 
+    segundos para alcanzar la máxima velocidad partiendo de 0.<p>Cuando el motor 
+    está al 0% de potencia, el robot frena con una desaceleración de 5 m/s<SUP>2</SUP>, 
+    mientras que que cuando está al 100% de potencia, acelera hasta la máxima 
+    velocidad.<BR>Cuando un robot choca las paredes, el motor cae al 0% de 
+    potencia y la velocidad desciende repentinamente a 0&nbsp;m/s. </p>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><a name="cannon">Cañón</a></H5>Los robots tienen un cañón que dispara 
+    misiles. El robot puede apuntar el cañón en cualquier dirección, y puede 
+    disparar todos los misiles que desee, pero tiene un tiempo de recarga de 1 
+    segundo. 
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><A name=missiles>Misiles</A></H5>Los misiles tienen un alcance de 700 
+    metros y una velocidad constante de 300&nbsp;m/s, por lo tanto necesitan 2 
+    1/3 de segundos para alcanzar la distancia máxima. Cuando un misil explota, 
+    daña a todos los robots que están a su alrededor (recordar que un daño del 
+    100% destruye al robot).<p>La cantidad de daño producida depende de la 
+    distancia entre el foco de la explosión y el robot:</p>
+      <UL>
+        <LI><B>5  metros </B> 10 puntos de daño 
+        <LI><B>20  metros </B> 5 puntos de daño 
+        <LI><B>40 metros</B> 3 puntos de daño </LI></UL>Si un robot dispara un 
+    misil dentro de un radio de 5 metros, se producirá a si mismo 10 puntos de 
+    daño, así que es mejor disparar a los enemigos desde lejos. 
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><a name="scanner">Radar</a></H5>Los robots usan un radar para detectar 
+    a los otros robots. El radar puede escanear toda la Arena con una resolución 
+    variable entre 1 y 20 grados. Al escanear el campo de batalla, el robot 
+    recibe la distancia del robot más cercano (amigo o enemigo), o cero si no 
+    hay enemigos en el sector.<P>
+    <a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <HR>
+
+      <P><FONT color=yellow><a name="Como puedo desarrollar un robot"><B>Cómo puedo desarrollar un robot?</B></a></FONT><a name="Como puedo desarrollar un robot">
+      </a>
+      <P>Esta sección describe el procedimiento que puede seguir para programar 
+      tu propio robot. 
+      <P><B>El Lenguaje de Programación <A name=lang>(Java)</A></B>
+      <P><B>Crobots</B> usa <B>C</B> como lenguaje de programación. Jrobots usa 
+      Java en su lugar.<P>Para programar tus robots debes escribir clases y 
+    métodos Java, pero no es tan difícil: solo necesitas un compilador (<A 
+      href="downloads.shtml">es gratis</A>) y 
+    Java usa una sintaxis muy parecida al lenguaje C. Si ya has desarrollado un 
+    Crobot, la conversión a Jrobots es bastante directa.<P>Para ver algunos 
+    ejemplo de codificación puedes ir a <A 
+      href="downloads.shtml">Downloads page</A>.<P>
+    <a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <P><B><a name="Reglas y limitaciones">Reglas y limitaciones</a></B><P>Estas son las reglas que necesitas 
+    conocer:<UL>
+        <LI>La clase Java que contiene los algoritmos de tu robot deben tener un 
+        nombre que comience con dos underscores, y debe terminar con uno (ej: 
+        "__MiRobot_"). 
+        <LI>La clase debe ser derivada de la clase "JJRobot". Por ejemplo: <PRE>public class MiRobot extends JJRobot {
+  // cuerpo
+}
+</PRE>
+        <LI>Debes poner en la clase al menos un método llamado <B>void main()</B>, 
+        que es el método que se ejecuta antes de la creación del robot. 
+        <LI>Por razones de seguridad, no puedes usar ninguna API de Java.<LI>El 
+        archivo con la clase debe tener un tamaño menor a 20 Kb (20480 bytes). 
+      </LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <P><B>
+    <a name="Funciones disponibles">Funciones disponibles</a></B><P>Puedes manejar el cañón, el motor y el 
+    radar usando estos métodos:<H5><a name="cannon">int cannon(int angulo, int 
+    rango)</a></H5>
+      <UL>
+        <LI><B>angulo</B> es la dirección del disparo medida en grados (los 
+        grados comienzan a las 3:00 y se incrementan en sentido horario).<LI><B>
+        rango </B>es la distancia a la que el misil explotará.<LI>La función 
+        retorna 1 si el misil se disparó, y 0 si no lo hizo (debido al tiempo de 
+        recarga). </LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><A name=damage>int damage()</A></H5>
+      <UL>
+        <LI>La función retorna el porcentaje de daño del robot: si está entre 0 
+        al 99 está vivo, sino está muerto (es decir que ese robot no podría leer 
+        este valor).</LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><A name=drive>void drive(int angulo, int velocidad)</A></H5>
+      <UL>
+        <LI><B>angulo </B>es la dirección del movimiento del robot (los grados 
+        comienzan a las 3:00 y se incrementan en sentido horario). Debes 
+        recordar que los robots pueden cambiar su dirección sólo si la velocidad 
+        es menor que el 50% (es decir 15&nbsp;m/s). 
+        <LI><b>velocidad</b> es la velocidad en porcentaje que el robot debe 
+        alcanzar: 0 
+        significa 0&nbsp;m/s, 100 significa 30&nbsp;m/s. 
+        <LI>La función no retorna nada.</LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><A name=scan>int scan(int </A><A name=cannon>angulo</A><A name=scan>, int resolucion)</A></H5>
+      <UL>
+        <LI><B>angulo</B> es la dirección de escaneo del radar (los grados 
+        comienzan a las 3:00 y se incrementan en sentido horario).<LI><B>resolucion</B> 
+        es la amplitud del haz medida en grados (es decir que el haz comienza 
+        <I>en angulo-resolucion/2</I> y finaliza en <I>angulo+resolucion/2</I>). 
+        Su valor debe ser mayor que 0 y menor que 20. 
+        <LI>La función retorna la distancia del robot más cercano encontrado en 
+        dicho sector, o 0 si ningún robot fue encontrado.</LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><A name=loc_x>int loc_x()</A></H5>
+      <UL>
+        <LI>La función retorna la coordenada X del robot en el campo de batalla (el 
+        origen está en la esquina superior izquierda y las coordenadas crecen 
+        hacia la derecha). </LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><A name=loc_y>int loc_y()</A></H5>
+      <UL>
+        <LI>La función retorna la coordenada Y del robot en el campo de batalla (el 
+        origen está en la esquina superior izquierda y las coordenadas crecen 
+        hacia abajo). </LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><A name=speed>int speed()</A></H5>
+      <UL>
+        <LI>La función retorna la velocidad del robot medida en porcentaje: 0 
+        significa 
+        0&nbsp;m/s, 100 significa 30&nbsp;m/s. </LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><A name=time>double time()</A></H5>
+      <UL>
+        <LI>La función retorna el tiempo transcurrido desde el inicio del 
+        combate medido en segundos 
+        (Esta función no estaba incluida en el juego <B>Crobots</B> original. 
+        Está disponible para obtener mejor control del tiempo). </LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5><A name=id>int id()</A></H5>
+      <UL>
+        <LI>La función retorna un número único de identificación del robot y es 
+        útil en los juegos de equipo. Si hay <I>n</I> robots en el equipo, este 
+        número puede ir desde 0 (para el primer robot creado) hasta <I>n-1</I>, 
+        que representa al último creado 
+        (Esta función no estaba incluida en el juego <B>Crobots</B> original. 
+        Está disponible para distinguir los robots en los modos Team y Double).</LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <H5>
+    <a name="math">Funciones Matemáticas</a></H5>Dado que no se puede usar 
+    la clase <I>java.lang.Math</I>, hay varias funciones para realizar cálculos 
+    matemáticos incluidas. Están las funciones originales de Crobots (por 
+    compatibilidad), y versiones más avanzadas también.<P>Las originales eran: 
+      <UL>
+        <LI><B>int rand(int limite)</B> para obtener números enteros aleatorios. 
+        <LI><B>int sqrt(int valor)</B> raíz cuadrada. 
+        <LI><B>int sin(int angulo)</B> función seno (el resultado es el seno 
+        multiplicado por 100000). 
+        <LI><B>int cos(int angulo)</B> función coseno&nbsp; (el resultado es el 
+        coseno multiplicado por 100000). 
+        <LI><B>int tan(int angulo)</B> función tangente&nbsp; (el resultado es 
+        la tangente multiplicada por 100000). 
+        <LI><B>int atan(int valor)</B> función arcotangente (valor, debe ser el 
+        valor real multiplicado por 100000 para que la función devuelva un 
+        ángulo en grados). </LI></UL><BR>Las avanzadas son: 
+      <UL>
+        <LI><B>double d_sqrt(double valor)</B> raíz cuadrada. 
+        <LI><B>double d_sin(double radianes)</B> seno. 
+        <LI><B>double d_cos(double radianes)</B> coseno. 
+        <LI><B>double d_tan(double radianes)</B> tangente. 
+        <LI><B>double d_atan(double valor)</B> arcotangente. 
+        <LI><B>double deg2rad(double angulo)</B> para convertir grados a 
+        radianes. </LI></UL>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <P>
+    <a name="Extensiones a las funciones básicas"><B>Extensiones a las funciones básicas</B>
+    </a>
+      <P>Los métodos anteriores corresponden a los funciones básicas 
+      disponibles. Existen un conjunto de extensiones incluidas en el SDK que 
+      pueden ser leídas en el 
+      <a href="extensions.txt">archivo de 
+      extensiones</a>.<P>
+    <a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <HR>
+
+      <P><FONT color=yellow><a name="send"><B>Cómo puedo enviar mi Jrobot para 
+      combatir con otros robots?</B></a></FONT><a name="send"> </a>
+      <P>Esta sección describe el proceso de &quot;carga&quot; de un <B>Jrobots</B>. 
+      <P><B><a name="Apertura de cuenta">Apertura de cuenta</a></B><P>Antes que 
+    nada debes tener una cuenta abierta. Sigue las instrucciones que encuentres 
+    en la página <A 
+      href="accounts.shtml">Accounts</A>. 
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <P>
+    <a name="upl"><b>Carga</b></a><P>Luego de abrir la cuenta puedes  cargar el archivo. Sigue las 
+      instrucciones de la página 
+      <A href="uploads.shtml">Uploads</A>. 
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <HR>
+
+      <P><FONT color=yellow><B>
+      <a name="Como puedo convertir mi viejo Crobot en un nuevo Jrobot">Cómo 
+      puedo convertir mi viejo Crobot en un nuevo Jrobot?</a></B></FONT>
+      <P>Esta sección describe como convertir un robot programado para Crobot en 
+      uno para <B>Jrobot</B>. 
+      <P><B><a name="Conversion">Conversión</a></B><P>La conversión es bastante 
+    directa. De hecho, la sintaxis de C es similar a la sintaxis de Java. Para 
+    ver los cambios, puedes encontrar en el archivo comprimido <A 
+      href="http://prdownloads.sourceforge.net/jrobots/jjrobots_offline.zip?download">Jrobots Java 
+      Classes &amp; Docs</A> algunos robots de ejemplo. Ellos son los robots 
+    originales 
+      <I>Sniper</I>, <I>Counter</I>, <I>Rook</I> y <I>Rabbit</I> convertidos a 
+    Jrobots.<P>Los cambios son simples. Sin embargo algunos características 
+    pueden ser diferentes, porque <B>Jrobots </B>usa otro motor de simulación 
+    diferente al usado por <B>Crobots</B>. 
+      Los temporizados que fueron originalmente realizados a través de ciclos, ahora 
+    deben usar la función 
+      <B>time()</B> porque el reloj de las CPU donde ejecutan los combates 
+    pueden ser muy diferentes.<P>Envíenos un <A href="mailto:boselli@uno.it">email</A> 
+    si necesita más información sobre el lenguaje Java o la conversión del 
+    código C.<P>
+    <a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+      <HR>
+
+      <P><FONT color=yellow><B><A name=app>Apéndices</A></B></FONT>
+      <P>En las siguientes secciones se describen algunos aspectos del juego no 
+      relacionados directamente con el desarrollo de los Jrobots, como ser el 
+      algoritmo utilizado para seleccionar los enemigos durante un juego y el 
+      algoritmo para generar el tiempo virtual en el que se desarrollan los 
+      combates.<HR width=300>
+
+      <P><a name="weighted"><B>Apéndice A - <a href="weightedSelection.txt">La regla de selección de los oponentes</a></B>
+      </a><FONT size=+0></FONT>
+
+      <P><a name="clock"><B>Apéndice B - <a href="virtualClockGenerator.txt">El generador de tiempo virtual</a></B> </a><FONT size=+0></FONT>
+      <P><a href="jjr_infoSpa.shtml#index">Indice</a> 
+
+
+</FONT>
+<!--------------------------------------------------->
+<!-------- End of Text. No More changes! ------------>
+<!--------------------------------------------------->
+
+
+</td></tr></table>
+
+ </TD></TR></TABLE>
+
+  </TD></TR>
+
+<!-------------------- FOOTER ---------------------->
+
+
+<TR><TD>
+
+<table border=1 bordercolor="black" cellpadding=5 cellspacing=0 bgcolor=78398D width=100%>
+<tr><td align=center>
+    <TABLE WIDTH=100% CELLPADDING=0 BORDER=0 CELLSPACING=0>
+    <TR><TD width=50% ALIGN=LEFT>
+<font color=white size=1 face=verdana,arial>For more information<BR>send an <A HREF="mailto:tetractys@uno.it">email</A> to<BR><A HREF="http://www.uno.it/utenti/tetractys/">TETRACTYS Software</A></FONT>
+    </TD><TD ALIGN=RIGHT VALIGN=CENTER width=50%>
+<font color=white size=1 face=verdana,arial>Copyright &copy; 1999-2005 <a href="mailto:boselli@uno.it">Leonardo Boselli</a><BR>All Rights Reserved. <a href="copyright.html">Legal Terms</a>.</FONT>
+    </TD></TR>
+    </TABLE>
+
+</td></tr></table>
+
+
+  </TD></TR> 
+  </TABLE>
+</BODY>
+</HTML>
+

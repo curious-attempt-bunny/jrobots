@@ -1,0 +1,920 @@
+<HTML><HEAD>
+
+<TITLE>Leonardo Boselli's JROBOTS</TITLE>
+
+<META NAME="KeyWords" CONTENT="virtual, reality, artificial, intelligence, physics, systems, java, applets, on-line, games"></HEAD>
+
+<BODY Bgcolor="black" Text=#ffffff Link=#ffc00 VLink=#ffc00 ALink=#f1e2f3 
+      topmargin=0 leftmargin=0 rightmargin=0 bottommargin=0>
+
+
+
+<!--------------- HEADER ------------------------->
+
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR align=left width="100%">
+     <TD align=left><img border=0 
+      src="gfx/titlebg_1.jpg"></td>
+    <TD align=right width="100%" valign=middle background="gfx/titlebg_2.jpg"> </TD></TR></TBODY></TABLE>
+<table border=1 bordercolor="black" cellpadding=0 cellspacing=0 bgcolor=78398D width=100%><tr><td>
+<font color=white size=2 face= verdana,arial><center>Multi-User, Time-Sharing, Real-Time Java Algorithms Challenge</center></font>
+</td></tr></table>
+
+<!--------------- Main Table --------------------->
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 HEIGHT=100% WIDTH=100% bgcolor=695246>
+  <TR><TD VALIGN=TOP ALIGN=CENTER>
+
+<!---------------- Menu Table -------------------->
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=6 WIDTH=100% height=100%>
+  <TR><TD VALIGN=TOP ALIGN=center WIDTH=150 valign=top height=100%>
+    
+    <TABLE BORDER=0 CELLPADDING=0 WIDTH=150 height=100%>
+<!---------- Start of menu ------------>
+			<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%" height=100%>
+			 <TR valign=bottom><td valign=bottom>
+  			  <table cellpadding=0 border=0 cellspacing=0><tr valign=top><td valign=top><img
+                    src="gfx/menu_top.gif" alt="" width=150></td></tr>
+	    		<tr><td background="gfx/menu_bk.gif">&nbsp;</td></tr></table>
+			 </td</tr> 
+			 <tr height=100%><td background="gfx/menu_bk.gif" valign=top>
+                   <CENTER><FONT face="Arial, Helvetica, Geneva" size=2></center>
+
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_info.html">Info</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_faq.html">FAQ</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_tutorials.html">Tutorials</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://www.onelist.com/group/javajousters">Mailing List</A><br>
+
+<br><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/accounts.shtml">Accounts</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/uploads.shtml">Uploads</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/downloads.shtml">Downloads</A><br>
+
+<br><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_match.html"><b>Battle Applet</b></A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/jjr_contests.shtml">Challenges</A><br>
+<br><br><center>
+<a href="http://www.jars.com/classes/jresout.cgi?resource=6808"><img src="jars_75.gif" alt="JARS Top 25%" align=center border=0></a><br></center>
+
+</FONT>
+   
+</td></tr>
+			<tr height=100%><td height=100% background="gfx/menu_bk.gif"><br><br>
+                  <img src="gfx/menu_bk.gif" alt="" height=100% width=150></td></tr>
+			<tr valign=top><td valign=top><img src="gfx/menu_bot.gif" alt="" width=150></td>
+                  </tr></table>
+<!---------- End of menu --------->
+
+  </TD>
+
+<!------------------ Text Table ------------------>
+
+
+<TD VALIGN=TOP ALIGN=CENTER>
+
+<TABLE BORDER=1 BGCOLOR="#1F0635" border color="black" cellpadding=8 cellspacing=0><TR><TD>
+
+<!--------------------------------------------------->
+<!-------- Changes should be done here only --------->
+<!--------------------------------------------------->
+
+<FONT FACE="verdana,arial" SIZE=-1>
+
+<A NAME="index">
+<P ALIGN=CENTER><FONT COLOR=yellow SIZE=+1>Jrobots Info</FONT><br><center><font size=-1>[English]&nbsp<A HREF="jjr_infoIta.html">[Italiano]</a>&nbsp<A HREF="jjr_infoSpa.html">[Español]</a></font></center>
+<hr>
+
+<ul>
+<li><A HREF="#what">What are <B>Jrobots</B>?</A>
+<ul>
+<li><A HREF="#intro">Introduction</A>
+<li><A HREF="#intro2">The Robots and the Battlefield</A>
+<ul>
+<li><A HREF="#arena">Arena</A>
+<li><A HREF="#matches">Matches</A>
+<li><A HREF="#engine">Engine</A>
+<li><A HREF="#cannon">Cannon</A>
+<li><A HREF="#missiles">Missiles</A>
+<li><A HREF="#scanner">Scanner</A>
+</ul>
+</ul>
+<li><A HREF="#develop">How can I develop a <B>Jrobot</B>?</A>
+<ul>
+<li><A HREF="#lang">The Programming Language (Java)</A>
+<li><A HREF="#rules">Rules and Limitations</A>
+<li><A HREF="#funcs">Available Functions</A>
+<ul>
+<li><A HREF="#cannon">cannon</A>
+<li><A HREF="#damage">damage</A>
+<li><A HREF="#drive">drive</A>
+<li><A HREF="#scan">scan</A>
+<li><A HREF="#loc_x">loc_x</A>
+<li><A HREF="#loc_y">loc_y</A>
+<li><A HREF="#speed">speed</A>
+<li><A HREF="#time">time</A>
+<li><A HREF="#id">id</A>
+<li><A HREF="#math">Math</A>
+</ul>
+<li><A HREF="#extens">Extensions to the Basic API</A>
+</ul>
+<li><A HREF="#send">How can I send my <B>Jrobot</B> to challenge other robots?</A>
+<ul>
+<li><A HREF="#acc">Choose an Account</A>
+<li><A HREF="#upl">Upload</A>
+</ul>
+<li><A HREF="#convert">How can I convert my old <B>Crobot</B> to a new <B>Jrobot</B>?</A>
+<ul>
+<li><A HREF="#cnv">Convert</A>
+</ul>
+<li><A HREF="#app">Appendices
+<ul>
+<li><A HREF="#weighted">The Weighted Selection Rule</A>
+<li><A HREF="#clock">The Virtual Clock Generator</A>
+</ul>
+</ul>
+
+
+<hr>
+<p><font color=yellow><b><A NAME="what">What are <B>Jrobots</B>?</A></b></font><p>
+These two paragraphs describe the purpose and the main characteristics of the game.
+<p><b><A NAME="intro">Introduction</A></b><p>
+<B>Jrobots</B> is a clone of <B>Crobots</B>, an old DOS game written by Tom Poindexter in 1985. There are some robots that fight in an arena, firing missiles and avoiding enemies' projectiles. This game seems quite involving, but it's not interactive. First, you must develop the algorithms of your own robots in a particular programming language, and then you upload them in the arena and follow on-line their fights against other robots. You can't help them, the robots are alone and you must teach them the combat techniques to survive. To see some robots fighting, go to the <A HREF="jjr_match.shtml">Match Applet page</A>.
+<p><A HREF="#index">Index</A>
+
+<p><b><A NAME="intro2">The Robots and the Battlefield</A></b><p>
+The following paragraphs describe the robots and battlefield characteristics. To develop your own <B>Jrobots</B> you must know these data.
+
+<H5><A NAME="arena">Arena</A></H5>
+The battlefield is a square with a side of 1 Km (1000 meters). When a robot hits the walls of this square, it earns 2 damage points out of a total amount of 100 and the engine stops. It's not the worst thing, but it's not a good one, so avoid the walls of the battlefield. When a robot reaches 100 damage points, it's disabled and loses the game.
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="matches">Matches</A></H5>
+There are three types of play:
+<ol>
+<li><B>Single Match</B>: Two robots fight one against the other.
+<li><B>Double Match</B>: Two couples of robots fight one against the other. This type of play is more difficult than the previous because it's not simple to distinguish the friend from the enemies.
+<li><B>Team Match</B>: Four team of eight robots each fight one against all the others.
+</ol>
+All matches last for 180 seconds. The robot or the team that disables all the other robots in the battlefield wins.
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="engine">Engine</A></H5>
+Robots have an engine and they can run everywhere in the battlefield. The maximum speed of the robots is 30&nbsp;m/s (meters per second), i.e. 100&nbsp;Km/h, and the acceleration is 5&nbsp;m/s<SUP>2</SUP>. This means that a robot needs six seconds to reach the maximum speed.<br>When the engine has 0% power, the robot stops with a deceleration of 5 m/s<SUP>2</SUP>, while a 100% power gives the maximum speed.<br>When a robot hits the walls, the engine reaches 0% power and speed suddenly falls to 0&nbsp;m/s.
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="cannon">Cannon</A></H5>
+Robots have a cannon. This cannon fires <A HREF="#missiles">missiles</A>. The robot can point the cannon all around and can fire all the missiles it wants, but there is a reload time of 1 second.
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="missiles">Missiles</A></H5>
+Missiles have a range of 700 meters and a speed of 300&nbsp;m/s, so they need 2 seconds and a third to reach the maximum range. The speed of the missile is independent from the speed of the robot, so it's always 300&nbsp;m/s. When a missile explodes, it gives damage points to all the robots nearby (remember that 100 damage points disable a robot). Damage points depend on the distance of the robot from the explosion. This is the correspondence
+<ul>
+<li><B>5 meters</B> 10 damage points
+<li><B>20 meters</B> 5 damage points
+<li><B>40 meters</B> 3 damage points
+</ul>
+If a robot fires a missile within a circle of 5 meters radius, it gives itself 10 damage points, so it's better to fire the missiles far away.
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="scanner">Scanner</A></H5>
+Robots use a scanner to find other robots. It scans the battlefield with a resolution from 1 to 20 degrees. Scanning the battlefield, the robot receives the distance of the nearest robot (both friend or enemy) or zero if there is no one in that sector.
+
+<p><A HREF="#index">Index</A>
+
+<hr>
+<p><font color=yellow><b><A NAME="develop">How can I develop a <B>Jrobot</B>?</A></b></font><p>
+This section describes the procedure you can follow to program your own robot.
+
+<p><b><A NAME="lang">The Programming Language (Java)</A></b><p>
+<B>Crobots</B> uses <B>C</B> as programming language. <B>Jrobots</B> uses <B>Java</B> instead.<br>To program your robots you must write Java classes, but it's not so difficult: you need only a Java compiler (<A HREF="downloads.shtml">it's free</A>) and Java has a syntax similar to C. If you have already developed a <B>Crobot</B>, the conversion to a <B>Jrobot</B> is straightforward.<br>To get some examples of coding go to the <A HREF="downloads.shtml">Downloads page</A>.
+
+<p><A HREF="#index">Index</A>
+<p><b><A NAME="rules">Rules and Limitations</A></b><p>
+These are the rules you need to know:
+<ul>
+<li>The Java class that contains the algorithms of your robot must have a name beginning with two underscores and ending with a single one (e.g. "__MyRobot_").
+<li>The class must be derived from the class "JJRobot". For example:
+<pre>
+public class MyRobot extends JJRobot {
+  // body
+}
+</pre>
+<li>You must put in the class a method named <B>void main()</B>, that is the method executed first after the creation of the robot.
+<li>For security reasons, you can't use any of the Java API.
+<li>The class file must have a size less than 20 Kb (20480 bytes).
+</ul>
+
+<p><A HREF="#index">Index</A>
+<p><b><A NAME="funcs">Available Functions</A></b><p>
+You can manage the cannon, the engine and the scanner using these methods:
+
+<H5><A NAME="cannon">int cannon(int degrees, int range)</A></H5>
+<ul>
+<li><B>degrees</B> is the direction in degrees of the shot (angles start from 3 o'clock and increase clockwise).
+<li><B>range</B> is the distance where the missile explodes.
+<li><B>returns</B> 1 if the missile was fired, 0 if not (due to reload time).
+</ul>
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="damage">int damage()</A></H5>
+<ul>
+<li><B>returns</B> the damage points of the robot: 0 to 99 means alive, 100 means dead (the robot will never read this value).
+</ul>
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="drive">void drive(int degrees, int speed)</A></H5>
+<ul>
+<li><B>degrees</B> is the direction of movement of the robot (angles start from 3 o'clock and increase clockwise). You must remember that robots can change their direction only if the speed is lower that 50% (say 15&nbsp;m/s).
+<li><B>speed</B> is the speed in percent that the robot must reach: 0 means 0&nbsp;m/s, 100 means 30&nbsp;m/s.
+<li><B>returns</B> nothing.
+</ul>
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="scan">int scan(int degrees, int resolution)</A></H5>
+<ul>
+<li><B>degrees</B> is the direction in degrees of the scan (angles start from 3 o'clock and increase clockwise).
+<li><B>resolution</B> is the width of the scan in degrees (scan start <I>degrees-resolution/2</I> to <I>degrees+resolution/2</I>). Its value must be greater than 0 and lesser than 21 degrees.
+<li><B>returns</B> the distance of the nearest robot found in that sector, or zero if no robot was found.
+</ul>
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="loc_x">int loc_x()</A></H5>
+<ul>
+<li><B>returns</B> the X coordinate of the robot in the battlefield (the origin is in the upper-left corner and X coordinates increase to the right).
+</ul>
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="loc_y">int loc_y()</A></H5>
+<ul>
+<li><B>returns</B> the Y coordinate of the robot in the battlefield (the origin is in the upper-left corner and Y coordinates increase to the bottom).
+</ul>
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="speed">int speed()</A></H5>
+<ul>
+<li><B>returns</B> the speed of the robot in percent: 0 means 0&nbsp;m/s, 100 means 30&nbsp;m/s.
+</ul>
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="time">double time()</A></H5>
+<ul>
+<li><B>returns</B> the elapsed seconds from the beginning of the fight (this function wasn't included in the original <B>Crobots</B> game. It's available to get better timing control).
+</ul>
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="id">int id()</A></H5>
+<ul>
+<li><B>returns</B> the identification number of the robot in the team. If there are <i>n</i> robots in the team, this number goes from 0, the first robot created, to <I>n-1</I>, the last one (this function wasn't included in the original <B>Crobots</B> game. It's available to distinguish between robots in the team and double matches).
+</ul>
+
+<p><A HREF="#index">Index</A>
+<H5><A NAME="math">Math</A></H5>
+You can't use the <i>java.lang.Math</i> class, but there are several built-in functions to perform math calculations. There are the original <B>Crobots</B> functions (for compatibility only) and advanced versions, too.
+<p>The original are:
+<ul>
+<li><B>int rand(int limit)</B> to get random int values.
+<li><B>int sqrt(int value)</B> square root.
+<li><B>int sin(int degrees)</B> sin function (result is sinus times 100000).
+<li><B>int cos(int degrees)</B> cos function (result is cosinus times 100000).
+<li><B>int tan(int degrees)</B> tan function (result is tangent times 100000).
+<li><B>int atan(int value)</B> atan function (value must be 100000 times the real value and result is in degrees).
+</ul>
+<br>The advanced are:
+<ul>
+<li><B>double d_sqrt(double value)</B> square root.
+<li><B>double d_sin(double radians)</B> sin function.
+<li><B>double d_cos(double radians)</B> cos function.
+<li><B>double d_tan(double radians)</B> tan function.
+<li><B>double d_atan(double value)</B> atan function.
+<li><B>double deg2rad(double degrees)</B> to convert from degrees to radians.
+</ul>
+
+<p><A HREF="#index">Index</A>
+<p><b><A NAME="extens">Extensions to the Basic API</A></b><p>
+Those listed above are the basic methods available. The following is a list of extensions already included in the SDK. 
+<font size="+0"><pre>
+EXTENSIONS
+----------
+
+SUMMARY
+=======
+1.  JJVector class
+2.  JJRobot class (additions)
+2.1 additions by Christo Fogelberg (November 2001)
+2.2 additions by Alan Lund (February 2002)
+2.3 additions by Tim Strazny (February 2002)
+
+-----------------
+1. JJVector class 
+=================
+
+by Christo Fogelberg (doubtme@hotmail.com) (November 2001)
+--------------------
+additions by Alan Lund (alan.lund@acm.org) (February 2002)
+----------------------
+
+Function Reference:
+
+# Constructors:
+
+  JJVector()
+    - Initializes to x=0, y=0, t=1
+
+  JJVector(double x, double y)
+    - Initializes to x, y, t=1
+
+  JJVector(double x, double y, double t)
+    - Initializes to x, y, t
+
+  JJVector(JJVector v)
+    - Copy constructor
+
+# Factory methods:
+
+  static JJVector Polar(double r, double a)
+  static JJVector Polar(double r, double a, double t)
+    - Construct a vector using polar coordinates instead of cartesian.
+
+# Basic Mutators:
+
+  void set_x(double x)
+  void set_y(double y)
+  void set_t(double t)
+
+  void set  (double x, double y)
+  void set  (double x, double y, double t)
+  void set  (JJVector v)
+
+Using set(JJVector) is _not_ the same as using "=". For JJVectors a and b,
+  a = b;
+  a.set(b);
+do different things - in the first case a points to the same JJVector as b.
+In the second, the value of the JJVector pointed to by a is the same as that
+pointed to by b - so they can be changed independently.
+
+# Basic Maths Functions:
+  None of these affect the internal state of the vector that calls them.
+
+  public double x()     - returns the x component of the vector
+  public double y()     - returns the y component of the vector
+  public double t()     - returns the t component of the vector
+  public double mag()   - returns the magnitude of the vector
+  public double angle() - returns the angle of the vector
+
+  public double r()     - returns the r (polar) coordinate of the vector
+                          (same as mag())
+  public double a()     - returns the a (polar) coordinate of the vector
+                          (same as angle())
+
+  public double dot(JJVector v)
+    - returns this . v, i.e. the dot product of this and v.
+
+  public double speed()
+    - returns the speed (distance / time) represented by the vector;
+      that is, mag() / t().
+
+  public JJVector velocity()
+  public JJVector velocity(JJVector result)
+    - Computes the velocity vector, which is just the vector pointing
+      in the same direction as "this", but with both time and distance
+      scaled, such that result.t() == 1.  (See below for the
+      usefulness of the second form.)
+
+# Vector arithmetic:
+  There are two versions of each of these functions, the convenient
+  version and the potentially faster version.
+
+First the convenient ones...
+
+  public JJVector plus(JJVector v)
+    - Adds "this" and "v" and returns the result
+
+  public JJVector minus(JJVector v)
+    - Subtracts "v" from "this" and returns the result
+
+  public JJVector mult(double d)
+    - Multiples" this" by "d" and returns the result
+
+  public JJVector rotate(double a)
+    - Rotates this by "a" degrees and returns the result
+
+Note that the time component _is_ affected by all but rotate().
+
+The following maths functions are designed slightly differently.
+The returned JJVector is a reference to the result argument.
+This avoids doing lots of ugly construction outside the control
+of the caller - instead, they can construct temporarys as and
+when necessary, while still chaining ops together.
+
+  public JJVector plus(JJVector v, JJVector result)
+    - sums "this" and "v" and returns the result.
+
+  public JJVector minus(JJVector v, JJVector result)
+    - returns "this" - "v"
+
+  public JJVector mult(double d, JJVector result)
+    - multiples "this" by the scalar "d" and returns the result
+
+  public JJVector rotate(double a, JJVector result)
+    - Rotates this by "a" degrees and returns the result
+    
+# Helpful Functions: 
+  Pretty much the ones I found I needed when I didn't want to do a
+  whole bunch of calculating in my code.
+  Feel free to request new ones.
+
+  public double dist(JJVector v)
+    - returns the distance beteween the two vectors. Will always be
+      positive.  Same as minus(v).mag().
+
+  public JJVector unit()
+  public JJVector unit(JJVector result)
+    - returns the "unit-ised" vector of this.  This function works in 
+      the same way as plus, minus and mult.
+
+Sample Use:
+
+Here is a function that calculates the estimated future position of a
+target using a prior location (and time) and a current location (and
+time), as well as the amount of time to predict into the future,
+assuming simple target leading.
+
+  private JJVector lead(JJVector lastPosition,
+                        JJVector newPosition,
+                        double   timeFromNow)
+  {
+    JJVector velocity = newPosition.minus(lastPosition).velocity();
+    return newPosition.plus(velocity.mult(timeFromNow));
+  }
+
+The estimated missile flight time might be
+  
+  JJVector myLocation     = ...
+  JJVector targetLocation = ...
+  double   flightTime     = myLocation.dist(targetLocation) / 300.0;
+
+
+-----------------
+2. JJRobots class (additions)
+=================
+
+2.1 by Christo Fogelberg (doubtme @ hotmail.com) (November 2001)
+------------------------
+
+double rad2deg(double val)  - converts val radians to an equivalent value
+                              between 0 and 360, measured in degrees.
+double d_abs(double val)    - returns the absolute value of val.
+double d_rnd(double val)    - returns val, as a double.
+int    i_rnd(double val)    - returns val, as an integer.
+
+
+2.2 by Alan Lund (alan.lund @ acm.org) (February 2002)
+----------------
+
+double d_loc_x()    - returns the x location of the robot as a double
+double d_loc_y()    - returns the x location of the robot as a double
+  - more precise than the older integer methods loc_x and loc_y 
+
+int cannon(JJVector v)
+  - v gives direction and distance
+  - returns 1 if the cannon shot, 0 otherwise
+
+JJVector vscan(int degree, int resolution)
+  - arguments work as in usual scan method
+  - returns the relative position as a JJVector
+
+void drive(JJVector v)
+  - v gives direction and REAL speed (0 to 30 in virtual m/s)
+
+double actual_speed()
+  - returns the real speed (0 to 30 in virtual m/s) as double
+
+double heading()
+  - returns the robot's current direction in radians
+
+JJVector velocity()
+  - returns the robot's current direction and REAL speed
+
+JJVector location()
+  - returns the robot's current location and the current time
+
+
+2.3 by Tim Strazny (timstrazny @ gmx.de) (February 2002)
+------------------
+
+double exp(double value)  - returns the exp
+double log(double value)  - returns the log
+
+
+2.3 by Leonardo Boselli (boselli @ uno.it) (March 2002)
+-----------------------
+
+int getFriendsCount()  - returns the number of team mates
+  - gives 1 for SINGLE, 2 for DOUBLE, 8 for TEAM
+  - doesn't report the number of mates still active (!)
+</pre></font>
+
+<p><A HREF="#index">Index</A>
+<hr>
+<p><font color=yellow><b><A NAME="send">How can I send my <B>Jrobot</B> to challenge other robots?</A></b></font><p>
+This section describes the <B>Jrobots</B> submission process.
+<p><b><A NAME="acc">Choose an Account</A></b><p>
+First of all you must get an account. Follow the instructions you find in the <A HREF="accounts.shtml">Accounts</A> page.
+
+<p><A HREF="#index">Index</A>
+<p><b><A NAME="upl">Upload</A></b><p>
+Then you can upload the file. Follow the instructions you find in the <A HREF="uploads.shtml">Uploads</A> page.
+
+<p><A HREF="#index">Index</A>
+
+<hr>
+<p><font color=yellow><b><A NAME="convert">How can I convert my old <B>Crobot</B> to a new <B>Jrobot</B>?</A></b></font><p>
+
+This section describes how to convert an existing <B>Crobot</B> in a new <B>Jrobot</B>.
+
+<p><b><A NAME="cnv">Convert</A></b><p>
+The conversion is quite straightforward. In fact, the syntax of <B>C</B> is similar to the syntax of <B>Java</B>. To see the changes, you can find in the ZIP file <A HREF="http://prdownloads.sourceforge.net/jrobots/jjrobots_offline.zip?download">Jrobots Java Classes & Docs</A> some sample robots. They are the original robots <I>Sniper</I>, <I>Counter</I>, <I>Rook</I> and <I>Rabbit</I> converted.
+<br>The changes are simple. However some settings may be different, because <B>Jrobots</B> uses another simulation engine than <B>Crobots</B>. Even timings that were performed with cycles, now must use the <B>time()</B> function because the CPU clocks of the computers where fights run may be quite different.
+<P><A HREF="mailto:boselli@uno.it">Send me an email</A> for more information about the Java language or the conversion of C code.
+<p><A HREF="#index">Index</A>
+
+
+<hr>
+<p><font color=yellow><b><A NAME="app">Appendices</A></b></font><p>
+
+These two sections describe aspects of the game not directly involved in the developement of the <b>Jrobots</b>: The selection rule used to choose the opponents during a tournament and the algorithm used to generate the virtual time of the fights.
+
+<hr width=300>
+<p><b>Appendix A - <A NAME="weighted">The Weighted Selection Rule</A></b><p>
+<font size="+0"><pre>
+
+The new selection strategy for Jrobots challenges
+--------------------------------------------------
+
+Excerpt from three emails of Alan Lund < alan.lund @ acm.org >
+(aka "Zeke" - author of "IonStorm")
+
+[First Post]
+
+I hate to say it, but I'm pretty sure there's a problem with the
+"Near" [or "Bubble-sorting"] selection algorithm...
+I've been thinking about how it should work out, and finally wrote
+a little simulation, with five robots, A through E.
+
+Here is a table with the simulated winning percentages of each pair.
+
+     vs  A      B      C      D      E
+  A      -     70     75     80     90
+  B     30      -     60     65     80
+  C     25     40      -     52     80
+  D     20     35     48      -     80
+  E     10     20     20     20      -
+
+So A is the strongest (by far), B next, C next (barely), D next,
+and E last (by far).
+
+I ran a simulated 4000 combats several times, which is
+proportionately much higher than what the real arena would see.
+
+Here are some results:
+  a   0.7302371542
+  c   0.511662531
+  b   0.5114541833
+  d   0.5111336032
+  e   0.1951466127
+
+  a   0.7329490874
+  d   0.51017294
+  b   0.5099403579
+  c   0.5094243505
+  e   0.2043222004
+
+  a   0.7064128257
+  b   0.517611026
+  c   0.5165923725
+  d   0.5160811479
+  e   0.1944167498
+
+  a   0.7388781431
+  c   0.5084409136
+  b   0.5077772203
+  d   0.505758638
+  e   0.1975051975
+
+Basically, the presence of a very strong A and a very weak E act as
+mixers.  Whoever is in second (or second to last) very quickly wins
+(or loses) enough to move back toward the middle.  A ends up with a
+winning percentage between it's percentage vs B and C... running the
+simulation longer gets it very close.  Similarly for E: it ends up
+with a percentage approximately equal to the best it does vs C and D.
+
+B, C and D end up in the middle, all very close together (usually
+within 0.1%!), and their order is not particularly related to their
+relative strengths.  In the four samples above we see CBD, DBC, BCD,
+and CBD (again).
+
+Now, the real mix of winning percentages is not going to be so nice,
+but I'm pretty sure that what is going to happen is that if there is a
+robot that beats each opponent more than 50% of the time, its
+winning percentage will tend toward the average of the winning
+percentages it has versus the top few remaining robots.  Which one of
+those robots gets second place is a question of when the tournament
+ends.  The second best robot (B) has a better probability of ending up
+second, but it's really a matter of luck.  And it doesn't matter if
+you run the tournament longer.  In some ways, that just guarantees
+that the middle few will converge to the middle and that the last few
+combats will decide the final placement.
+
+I am sure there are lots of other things that could be examined,
+including things like A beats B, B beats C, C beats A, or that no
+robot beats all others more than 50% of the time. But as it happens,
+IonStorm (in my tests) does beat each of the other robots at least 70%
+of the time (in Single play). So, I expect that a true bubble sort
+selection algorithm would clearly (and fairly) show IonStorm on top,
+but the remaining places would be somewhat questionable, and the
+situation would get worse as time went on...
+
+Now, I started this message by mentioning that I don't think the
+selection algorithm is working quite right.  Given the above, that
+might not be so bad.  Mixing up the opponents, but giving preference
+to those near, should help maintain a more representative ordering.
+
+In any case, I do agree that there should be some way to distinguish
+among the top few robots better, but I'm not sure yet what that should
+be. I do think that a good starting point would be to use random
+selection and keep a record of each individual match. Then you could
+do some more detailed reporting.
+
+For instance, maybe you could do the rating in two passes.  First, you
+rank all the robots using their overall win percentages.  Then, rank
+them again using their win percentages vs. the top five other robots,
+or the top 25%, or whatever.  (Team mode would be more complicated.)
+
+That's just one idea.  But recording the results of individual matches
+would allow you to play with some of those kinds of things without
+having to re-run the entire tournament.  It would also provide some
+helpful debugging information when the selection algorithm is not
+working as planned (so we could find out, for instance, who IonStorm
+is fighting that isn't KillerBees).
+
+[Second Post]
+
+I've been working on evaluating different selection strategies, and I
+have a proposal.
+
+The method I used was to write a simulation in which seven robots did
+combat.  Each robot had a particular probability of winning against
+each other robot; different opponents had different probabilities.
+In general, there was not an "obvious" order... for instance, A beats
+B, B beats C, C beats A, and that sort of thing.
+
+I took the ideal ranking of the robots to be what would be obtained
+after a large number of combats in which each pair was chosen an equal
+number of times.  This just reduces to taking the average of each
+robot's per-opponent winning percentage.
+
+So given a defined "best" ranking, I evaluated different selection
+strategies based on how quickly and reliably they reproduced the
+correct ordering.  (The simulated combats are just random numbers
+evaluated against the winning percentage of one robot over the other.)
+
+I evaluated purely random pairings as JRobots does now in Random mode,
+which I'll call RANDOM and five other selection strategies, all of
+which were variations on a weighted selection.
+
+Four of the others were really the same algorithm, just with different
+values for one parameter.  The algorithm is
+  1. Pick one robot (Ri) at random (0 <= i < N)
+  2. Calculate the difference in overall winning percentage between Ri
+     and for each other robot Rj, 0 <= j < N, j <> i.  Call these
+     differences Dj.  0 <= Dj <= 1 for each j <> i;
+  3. Calculate "weights" for each robot.  Wj = 1 - Dj^P, where ^ is
+     exponentiation and P is the parameter I mentioned earlier.
+     0 < P <= 1.  (Actually P could be greater than 1, but I didn't
+     try any such values.)  Wj is greater when Dj is smaller, so Wj
+     increases as the winning percentage of Rj gets closer to that
+     of Ri.  Due to the way that Dj^P looks for 0 <= Dj <= 1, smaller
+     values of P correspond to "narrower" selections... that is nearer
+     robots get chosen more often.
+  4. Choose an opponent Rk with probability Wk / sum(Wj).  (Or in team
+     mode, choose three opponents.)
+
+As I said, I tried four values for P: 0.25, 0.3333, 0.5 and 1.0.  Call
+these WEIGHTED(0.25), ... WEIGHTED(1.0).
+
+The last strategy I tried was too increase the probability of a robot
+being chosen (in step 1 above) based on how close it was to its
+nearest neighbor in overall winning percentage.  The idea there was
+that allocating more combats to robots that are close together would
+disambiguate the ranking more quickly.  Call this one GOOFY.  (Sorry,
+I can't think of a good name... it won't matter.)
+
+In the end, WEIGHTED(1.0) performed the best. In simulated tournaments
+of about 6000 simulated combats, that selection strategy yielded the
+correct ordering about 70% of the time. RANDOM produced about 45%
+correct values. WEIGHTED(0.5) was also about 70% accurate, but was
+less accurate for smaller numbers of combats than WEIGHTED(1.0) was.
+WEIGHTED(0.3333) and WEIGHTED(0.25) finished at about 68% and 61%
+respectively.  GOOFY finished at a terrible 44%, about the same as
+RANDOM, but looking at the graph of success rate vs. number of
+combats, it was barely improving with more combats, and was never
+competitive with any of the WEIGHTED strategies.
+
+Assuming the results aren't too specific to the test data I used, it
+appears that using WEIGHTED(1.0) or even WEIGHTED(0.5) would result in
+approximately a 50% increase in "efficiency" (70 / 45 = 1.56).
+
+It's also depressing to see how _many_ combats are required: 6000 just
+to get a 70% chance of being right, and further combats improve the
+percentage more and more slowly.  I'd guess that the number of
+required combats goes up at least linearly and quite possibly as the
+square of the number of robots.
+
+Of course, that is all evaluating the selection strategies on getting
+the entire ranking correct.  An alternative would be to put more
+emphasis on just getting the top 6, or the top 25% or top 50% correct.
+This would correspond to modifying Step 1 of the algorithm above to
+give the chosen few a better chance of getting selected.
+
+[Third and last post]
+
+I modified the second half of initArena(), replacing the old "near"
+selection with the weighted selection. I also added two private helper
+methods, magnifyUserSelections() and weightedSelection(). I tried to
+comment rather thoroughly.
+
+As you read through it, you will see three parameters that you could
+adjust: "floor", "threshhold" and "p".  "floor" and "threshhold" are
+used to compute a value for "c", which was one of two parameters I
+mentioned previously.
+
+"floor" is basically the lower limit for "c".  I set it to 0.05.
+
+"threshhold" provides some control over how quickly the selection of
+the first robot goes from mostly random to biased.  Higher values of
+"threshhold" result in a slower transition.  I made this 5 times the
+number of robots in the tournament.
+
+"p" is used to control how heavily the selection of additional robots
+is biased towards those with a winning percentage near that of the
+first robot.  Smaller values of "p" produce a higher bias.  Larger
+values produce a more even selection.  I set this to 1.0, which was
+the value that worked best in my simulations.
+
+The algorithm does correctly handle the cases where the user has
+chosen one or more robots in the list. Robots are picked
+preferentially from the selected items, and then from the unselected
+items if necessary.
+
+I ran several thousand single and team matches, and the match
+distribution seems reasonable.
+
+It may shift percentages downward, since the best robots get a
+disproportionate number of matches (meaning that others will be beaten
+more than usual).  You may want to consider whether or not to adjust
+the 50/50/25 rule based on this effect.
+
+For instance, I got the following results for fourteen robots in
+Singles matches (run at 4X if matters):
+
+  Robot                Wins  Matches   Win %
+  ------------------------------------------
+  IonStorm             620     660     93.9
+  KillerBees           570     707     80.6
+  Myst                 356     601     59.2
+  IlTristoSmorzatore   339     584     58.0
+  Fish                 237     524     45.2
+  NeoMonty             230     525     43.8
+  LvRDumber            206     473     43.6
+  Pulse1               215     530     40.6
+  MontyZ               168     434     38.7
+  Marvin3              175     481     36.4
+  Epa1                 137     446     30.7
+  Firetron             124     412     30.1
+  Jimbo                 58     305     19.0
+  bdj1                  19     226      8.4
+
+You can see that the best robots got about three times as many matches
+as the worst one, and that 10 of 14 ended up below 50%, but only 6
+ended up below 40%.
+
+[To read the code, go to the downloads section
+http://jrobots.sourceforge.net/downloads.shtml ,
+download the source code of the simulator of
+Jrobots and open the file JJArena.java]
+
+</pre></font>
+<p><A HREF="#index">Index</A>
+<hr width=300><p><b>Appendix B - <A NAME="clock">The Virtual Clock Generator</A></b><p>
+<font size="+0"><pre>
+
+JJRobots Virtual Clock Generator (March 2002)
+--------------------------------
+
+This latest version of the game actually brings a little revolution with it: in
+order to obtain faithful results of robot performance across a vast multitude
+of environments, OSes, Virtual Machines, CPUs, it was necessary to separate the
+time as seen by the robots (virtual time) from the time seen by the observer
+(real time), in order to provide constant CPU power per second to the robot
+threads.
+
+With this version, the simulation time (or virtual time) is calibrated around
+the speed of the machine it's running on by a special "benchmark" function; as
+a result, the *real* speed of the simulation now varies according to the speed
+of the CPU, JVM and OS.  So, you may notice an increase or decrease of the
+number of matches per hour of real time that can be played on your machine, but
+you can be (almost!) guaranteed that the performance of the robots tested and
+developed on your machine will be consistent across all the possible
+environments they could be executed on in the real tournament.  CPU contention
+due to other running programs will be gracefully accomodated, causing the
+simulation to slow down, rather than becoming "jumpy" as with earlier versions.
+
+A new option has been provided in the user interface: "Display", which can be
+set to "Smooth" (60 fps of real time), "Fast" (30 fps of *virtual* time) and
+"None", where the match is not shown but the clock counter is updated and the
+results are displayed; this setting can be easily changed even within a match.
+"None" corresponds most closely with the way actual tournament matches are
+executed, as well as being a bit faster.
+
+When watching a match, choose between Smooth and Fast, whichever looks best for
+you. While running extended tests, you might consider opting for "None" in
+order to get a higher number of matches played per hour.  Whatever you choose,
+unless you have a very fast machine you will notice a considerable slow down in
+Team play.  That is actually one of the biggest benefits of virtual time, as
+it's now granting a lot more CPU time to the robots, which can now make use of
+more advanced targeting techniques even in this previously CPU-constrained mode
+of play.  
+
+As a way to compensate to for the possible slow down / speed up of
+visualization, two new simulation speed settings have been provided: 8X and
+1/8X; however, keep in mind that changing the simulation speed actually changes
+the CPU time allocated to the robots, so in order to obtain the most faithful
+picture of your robot's performance, do intensive testings at the official
+speed of 1X.
+
+Finally, you should expect to see some changes to win rates, especially in Team
+mode where robots are now given more CPU time than they were previously.
+
+
+Alan Lund (alan.lund @ acm.org)
+Walter Nistico' (walnist @ infinito.it)
+
+</pre></font>
+<p><A HREF="#index">Index</A>
+
+
+</FONT>
+<!--------------------------------------------------->
+<!-------- End of Text. No More changes! ------------>
+<!--------------------------------------------------->
+
+
+</td></tr></table>
+
+ </TD></TR></TABLE>
+
+  </TD></TR>
+
+<!-------------------- FOOTER ---------------------->
+
+
+<TR><TD>
+
+<table border=1 bordercolor="black" cellpadding=5 cellspacing=0 bgcolor=78398D width=100%>
+<tr><td align=center>
+    <TABLE WIDTH=100% CELLPADDING=0 BORDER=0 CELLSPACING=0>
+    <TR><TD width=50% ALIGN=LEFT>
+<font color=white size=1 face=verdana,arial>For more information<BR>send an <A HREF="mailto:tetractys@uno.it">email</A> to<BR><A HREF="http://www.uno.it/utenti/tetractys/">TETRACTYS Software</A></FONT>
+    </TD><TD ALIGN=RIGHT VALIGN=CENTER width=50%>
+<font color=white size=1 face=verdana,arial>Copyright &copy; 1999-2005 <a href="mailto:boselli@uno.it">Leonardo Boselli</a><BR>All Rights Reserved. <a href="copyright.html">Legal Terms</a>.</FONT>
+    </TD></TR>
+    </TABLE>
+
+</td></tr></table>
+
+
+  </TD></TR> 
+  </TABLE>
+</BODY>
+</HTML>
+

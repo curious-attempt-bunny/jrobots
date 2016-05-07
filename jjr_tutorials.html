@@ -1,0 +1,748 @@
+<HTML><HEAD>
+
+<TITLE>Leonardo Boselli's JROBOTS</TITLE>
+
+<META NAME="KeyWords" CONTENT="virtual, reality, artificial, intelligence, physics, systems, java, applets, on-line, games"></HEAD>
+
+<BODY Bgcolor="black" Text=#ffffff Link=#ffc00 VLink=#ffc00 ALink=#f1e2f3 
+      topmargin=0 leftmargin=0 rightmargin=0 bottommargin=0>
+
+
+<!--------------- HEADER ------------------------->
+
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR align=left width="100%">
+     <TD align=left><img border=0 
+      src="gfx/titlebg_1.jpg"></td>
+    <TD align=right width="100%" valign=middle background="gfx/titlebg_2.jpg"> </TD></TR></TBODY></TABLE>
+<table border=1 bordercolor="black" cellpadding=0 cellspacing=0 bgcolor=78398D width=100%><tr><td>
+<font color=white size=2 face= verdana,arial><center>Multi-User, Time-Sharing, Real-Time Java Algorithms Challenge</center></font>
+</td></tr></table>
+
+<!--------------- Main Table --------------------->
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 HEIGHT=100% WIDTH=100% bgcolor=695246>
+  <TR><TD VALIGN=TOP ALIGN=CENTER>
+
+<!---------------- Menu Table -------------------->
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=6 WIDTH=100% height=100%>
+  <TR><TD VALIGN=TOP ALIGN=center WIDTH=150 valign=top height=100%>
+    
+    <TABLE BORDER=0 CELLPADDING=0 WIDTH=150 height=100%>
+<!---------- Start of menu ------------>
+			<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%" height=100%>
+			 <TR valign=bottom><td valign=bottom>
+  			  <table cellpadding=0 border=0 cellspacing=0><tr valign=top><td valign=top><img
+                    src="gfx/menu_top.gif" alt="" width=150></td></tr>
+	    		<tr><td background="gfx/menu_bk.gif">&nbsp;</td></tr></table>
+			 </td</tr> 
+			 <tr height=100%><td background="gfx/menu_bk.gif" valign=top>
+                   <CENTER><FONT face="Arial, Helvetica, Geneva" size=2></center>
+
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_info.html">Info</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_faq.html">FAQ</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_tutorials.html">Tutorials</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://www.onelist.com/group/javajousters">Mailing List</A><br>
+
+<br><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/accounts.shtml">Accounts</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/uploads.shtml">Uploads</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/downloads.shtml">Downloads</A><br>
+
+<br><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_match.html"><b>Battle Applet</b></A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/jjr_contests.shtml">Challenges</A><br>
+<br><br><center>
+<a href="http://www.jars.com/classes/jresout.cgi?resource=6808"><img src="jars_75.gif" alt="JARS Top 25%" align=center border=0></a><br></center>
+
+</FONT>
+   
+</td></tr>
+			<tr height=100%><td height=100% background="gfx/menu_bk.gif"><br><br>
+                  <img src="gfx/menu_bk.gif" alt="" height=100% width=150></td></tr>
+			<tr valign=top><td valign=top><img src="gfx/menu_bot.gif" alt="" width=150></td>
+                  </tr></table>
+<!---------- End of menu --------->
+
+  </TD>
+
+<!------------------ Text Table ------------------>
+
+
+<TD VALIGN=TOP ALIGN=CENTER>
+
+<TABLE BORDER=1 BGCOLOR="#1F0635" border color="black" cellpadding=8 cellspacing=0><TR><TD>
+
+<!--------------------------------------------------->
+<!-------- Changes should be done here only --------->
+<!--------------------------------------------------->
+
+
+<FONT FACE="verdana,arial" SIZE=-1>
+
+<A NAME="index">
+<P ALIGN=CENTER><FONT COLOR=yellow SIZE=+1>Jrobots Tutorials</FONT><br><center><font size=-1>[English]&nbsp<A HREF="jjr_tutorialsIta.html">[Italiano]</a>&nbsp;<A HREF="jjr_tutorialsSpa.html">[Español]</a></font></center>
+
+<hr>
+<ol>
+<li><a href="#tips">Useful Tips for Beginners</a> <i>and for all the others too!</i>
+<li><a href="#aiming">Aiming techniques</a>
+<li><a href="#jjrobot_Platoon">The making of... Platoon</a>
+<li><a href="#PhalanxStinger">The making of... Phalanx and Stinger</a>
+</ol>
+<hr>
+<a name="tips"></a>
+<font color=yellow><b>Useful Tips for Beginners</b> - <font size="-1">Author: <b>Caos</b></font></font>
+
+<i><p>The main purpose of this note is to analyze some characteristics of the game from a
+tactical point of view, without entering into implementation details.
+<br>Most of the advices included are very basic (but needed), and some of them involve more
+complex concepts that should be developed to get an effective advantage. I hope
+they could be useful for a wide spectrum of competitors, like they help me to
+reach the current status of <b>Tango</b>...
+<br>Consider they are just some personal opinions of what I've considered good practices
+when developing my robot.
+<br>I'm sure some people could have more effective advices, and different approaches to
+obtain good results in the game... and of course, I'm interested in them.</i>
+
+<p><h4><font color=#ffff80>G. General</font></h4>
+
+<ol>
+<p><li><b><font color=#ffff80>Details matter</font></b>
+
+<p>The sum of small diferences between bots, makes a big overall difference. Remember results
+are statistically measured...
+
+<p>Sometimes I'm surprised of how a very small change in the movement pattern, or a small tuning
+in the weapon, result in a very different final result. It remembers me (in some sense) to the &quot;butterfly effect&quot; in complex systems...
+
+<p>How distant are you from leaders? Consider 10 points of difference in a game, could be done
+just for a pair of good missiles.
+
+<p><li><b><font color=#ffff80>Develop your survivor instinct</font></b>
+
+<p>Agressivity is good, but it should decrease along the health... or, at least, conservative
+actions should be taken before the end.
+
+<p>Some behaviors should calm down when death is near. Perhaps you can get a draw, or a
+partner could resolve the situation for you!
+
+<p><li><b><font color=#ffff80>Use the constants</font></b>
+
+<p>Each constant in the game sets limits to the calculations we make inside the robot
+processes (movements, targeting and shooting):
+<br>Max range of shooting, missile's speed, size of the field, damage of the impact, max speed
+of the robots, min rational speed, total time, etc.
+
+<p>It's very effective to filter the final calculated results, by the restrictions imposed
+by these constants.
+
+<p>An easy example: the enemy never could go beyond the arena´s limits, nor your shooting
+estimation should exceed the max distance the target could travel at max speed.
+
+<p><li><b><font color=#ffff80>Take advantage of your supremacy</b></font>
+
+<p>Advantages could be measure by: damage, alive partners, axis positions, etc. If you are in
+a considerable advantage, attack!
+
+<p>There are several ways to estimate the values that determine if you are in advantage, and
+some of them have been discussed in the group messages (read the <a href="http://www.onelist.com/group/javajousters">Mailing List</a>).
+
+<p><li><b><font color=#ffff80>Tie if you are in disadvantage</b></font>
+
+<p>Remember that your first option should be to win the game, and the second one... is to
+draw! Lose is not an option... it's a consequence.
+
+<p><li><b><font color=#ffff80>Share information among partners</b></font>
+
+<p>Be sure you can access the information of your partners when playing in Double and Team
+modes. They will help you to develop a cooperative strategy.
+
+<p>At the initialization phase, you can create static attributes or a static array containing all your robots, to access directly their information (or methods)...
+
+</ol>
+
+<p><h4><font color=#ffff80>M. Movement</h4></font>
+
+<ol>
+<p><li><b><font color=#ffff80>Start quickly</b></font>
+
+<p>Weak robots frecuently lose at least 5 point of difference just at the very beginning, due
+to being quiet too much time. Start moving...
+
+<p><li><b><font color=#ffff80>Keep moving, ever!</b></font>
+
+<p>To stop completely is worst than being predictable. Speed never should go down the
+&quot;minimum reasonable speed&quot; of <i>15m/s</i>.
+
+<p><li><b><font color=#ffff80>Avoid the walls</b></font>
+
+<p>A pair of points is a big diference when the competition is hard. And worst, your robot
+will be quiet for a while and it will be an easy target for the enemy. Define
+your own <i>move()</i> method, which test for potential collisions before calling the
+native <i>drive()</i>.
+
+<p><li><b><font color=#ffff80>Flock is good, but avoid to be too near from partners</b></font>
+
+<p>Each enemy's missile will produce the double (or worse) of damage if 2 (or more)
+partners are in the range of the explosion. If two partners are too near, they
+have almost the same potential value than just one enemy, and therefore they
+lose the numerical advantage.
+
+<p><li><b><font color=#ffff80>700m strategy is a must</b></font>
+
+<p>Every good robot has one... It's important in Single mode and vital in Team mode. If you
+choose an agressive one, remember don't insist until the death. Take care with
+corners... or you could be <i>jailed</i>.
+
+<p><li><b><font color=#ffff80>Precision decreases with distance</b></font>
+
+<p>That could be a good or bad thing depending on the situation and your strategy, ... but
+it's a fact. So, use it!
+
+<p>Of course if you develop a good targeting algorithm, try to be far away from your
+opponent to take advantage of that. In general, there is an optimal distance
+that balance your shooting precision and the length of your movements.
+
+<p><li><b><font color=#ffff80>Going straight is very dangerous</b></font>
+
+<p>It's the most easy &quot;pattern&quot; to predict. Never expose an easy target to your
+enemy!
+
+<p><li><b><font color=#ffff80>Return over the track is dangerous too</b></font>
+
+<p>Some basic robots shoot to the position collected by the radar. When the missile arrives to
+the destination, you should be far away from there... but you could be in the wrong place if your bot has decided to return.
+
+<p><li><b><font color=#ffff80>Optimal time to turn</b></font>
+
+<p>Assuming that the most common estimation method is to fire ahead, the best moment to
+turn is when the enemy has fired the missile. You can estimate this precise
+moment assuming it is shooting at the maximum frequency (1 missile per second). So
+you can use the time of the last impact received by your robot and the distance,
+to estimate when he is ready to fire again.
+
+<p><li><b><font color=#ffff80>Optimal angle to turn?</b></font>
+
+<p>Maybe... but one thing it's true, turning 180 (or around 0) degrees, is not the best
+choice because it simplify the task of your opponent. Most of them estimate
+your movement as linear, therefore every position over the actual traveling
+line won't be safe. Some will shoot behind you, and other ahead you, so side
+turns is a smarter choice.
+
+<p><li><b><font color=#ffff80>Consider the distance</b></font>
+
+<p>When you are closer to the enemy, precision improves and missiles arrive quicker. So you
+have less time to run away... don't expose an easy target, change your position quickly.
+
+<p><li><b><font color=#ffff80>Protect weak partners</b></font>
+
+<p>A very damaged partner produces the SAME damage than a healthy one. A dead robot doesn't produce anything... so move them far away from enemies.
+
+</ol>
+
+<p><h4><font color=#ffff80>T. Targeting</h4></font>
+
+<ol>
+<p><li><b><font color=#ffff80>Save a history of samples</b></font>
+
+<p>You will need them to estimate the target's future position, and to act in consecuence.
+It's obvious when you think about shooting, but sometimes it could be useful to
+determine your own movements too...
+
+<p><li><b><font color=#ffff80>Take care about time consumption</b></font>
+
+<p>To make 360 scans too often could take too much time, specially if your robot needs a lot
+of calculations inside the scanning process. You can remember target's last
+position and search around it, or use a kind of dichotomic search.
+
+<p>At the beginning, it originated a delay in <b>Tango</b> that affected its overall performance. 
+
+<p>Moreover, if you have an efficient (time) robot, you can use faster speeds in the Arena to
+improve the debug process.
+
+<p><li><b><font color=#ffff80>Improve the precision</b></font>
+
+<p>The native scan gives you a maximum precision of 1 degree. The error it could contain at long
+distance is important.
+
+<p>Once found the target, you can play with a pair of consecutive readings with small
+variations of angles and beam width to double the precision.
+
+<p><li><b><font color=#ffff80>Use several samples to approximate the real position</b></font>
+
+<p>Don't believe just in one reading. Use a combination of 2 (or more) consecutive readings to
+get a more approximated position.
+
+<p>Try to find a sampling frecuency that gives you some meaningful information between
+samples.
+
+<p>Sampling too often could slow down your bot, and the variation could be too small to be
+useful.
+
+<p><li><b><font color=#ffff80>Share information among partners</b></font>
+
+<p>Precision increases with a pair of different points of view. You can use 2 (or more) partners
+to combine information to improve the precision.
+
+<p>Moreover, you can give preponderant value to scans of robots nearer to target.
+
+<p><li><b><font color=#ffff80>Signal processing?</b></font>
+
+<p>Assume you are sampling a signal wich have &quot;noise&quot;, so you should
+&quot;absorb&quot; it. You can try some known function, or to invent your own...
+
+<p>Fortunately here things are simpler than the general problem. In the game, the signal is
+not arbitrary... It's compounded of broken lines, so you could &quot;aling&quot; the samples (just take care of angles)
+
+<p><li><b><font color=#ffff80>Iterative targeting</b></font>
+
+<p>Remember, your estimation should consider that the target will be moving while the missile is
+travelling. So you could need an iterative process (or a mathematical model) to
+estimate the most approximated target position when the missile arrive.
+
+<p>Iteration is a worth and easy technique... but general experience shows that 2 cycles are
+enough to obtain a reasonable precision. There are mathematical models to
+simplify it too. (Read previous explanation about it, in the <a href="http://www.onelist.com/group/javajousters">Mailing List</a>).
+
+<p><li><b><font color=#ffff80>Improve your scanning alone</b></font>
+
+<p>To test my scanning algorithm, I used to collect, in a simultaneous way, the estimations
+obtained by my scan algorithm and the real positions of the target.
+
+<p>After that, I estimated the overall (quadratic) error comparing estimated vs. real in a
+spreadsheet, so I can evaluate the precision of different targeting methods.
+
+<p>To collect the real position, you can fight against a robot prepared for testing, that
+just save its real path... or other way: modifying the scope of the array
+&quot;jr&quot; in the JJRobots class, and then simply call the enemy methods
+<i>loc_x()</i> and <i>loc_y()</i> to get the target's real position.
+
+</ol>
+
+<p><h4><font color=#ffff80>S. Shooting</h4></font>
+
+<ol>
+<p><li><b><font color=#ffff80>Care your friends and yourself...</b></font>
+
+<p>It's a very obvious advice, but surprisingly it's common to find bots with self destructive
+behavior... To recognize a friend, compare the estimated position with the real
+positions (previously saved in a shared array?) of your partners.
+
+<p><li><b><font color=#ffff80>Quicker is better</b></font>
+
+<p>Don't miss time between shots, every <i>ms</i> can make the vital difference in the last shot
+of the game if things come tight... so synchronize your weapon.
+
+<p><li><b><font color=#ffff80>Sinchronize shared target</b></font>
+
+<p>Eat the cake, bite by bite. It's more productive to join fire power against shared
+targets than to fire in a separate way.
+
+<p><li><b><font color=#ffff80>Be persistent</b></font>
+
+<p>Insist with your targets. A very damaged enemy produces the SAME damage than a healthy one.
+So finish your work before change the target.
+
+<p><li><b><font color=#ffff80>If you doubt, be conservative</b></font>
+
+<p>To &quot;overestimate&quot; the movement of your opponent in general works fine
+just with &quot;linear&quot; robots. Good robots change of direction
+frequently, so a less predictive estimation could work better.
+
+<p><li><b><font color=#ffff80>Put &quot;hard&quot; limits to estimations</b></font>
+
+<p>Your estimations never should break the &quot;physical&quot; rules, so put a filter
+before call the <i>cannon()</i> function.
+
+<p>For example, a target never could advance more than <i>30 m/s</i> so you can limitate your
+estimation considering the missile flight time. If you have estimated the
+current target's speed, you could adjust and improve this limit... Consider
+that in general they never advance less than <i>15m/s</i> neither, and the estimated
+position never could be out of arena's limits. Etc.
+
+<p>If the target is in the explosion (<i>40m</i>) range, what should we do? You can optimize the
+benefit considering the enemy´s damage and your own self damage.
+
+<p><li><b><font color=#ffff80>Pattern prediction works!</b></font>
+
+<p>Some robots have a predictable pattern... and in general other too <b>;-)</b>
+
+<p>Some of them have a very deterministic pattern (e.g. Dragon, etc.), and other have more
+complex patterns... but if you are patient you should find some relationship
+among coordinates (x,y,t). Use these patterns to improve your estimations...
+
+<p><li><b><font color=#ffff80>Scenarios</b></font>
+
+<p>You can use several techniques (or parameters) to estimate the target future position, and
+you will note each technique (or parameters) works well with some enemies but not
+as well with other...
+
+<p>It's possible to use a kind of &quot;what if&quot; analysis during the game, to decide which
+technique is better against the current robot.
+
+</ol>
+
+<i><p>Unfortunatly, as corresponding to every rule, most of those included here have small
+exceptions... and I'm sure these exceptions are exploited by good robots. At least <b>Tango</b> does it <b>;-)</b>
+<br>Anyway, I think general rules are a good beginning, and exceptions could be discussed
+further.
+<br>I hope some of you find these advices useful to improve your robots.</i>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Caos</b></p>
+
+
+<hr>
+<a name="aiming"></a>
+<font color=yellow><b>Aiming Techniques</b> - <font size="-1">Author: <a href="mailto:boselli@uno.it">Leonardo Boselli</a></font></font>
+<p>The limitations of the simpler robots are clear: they use the scanner to locate the enemy and then fire a missile to that location. Often they miss the target because it moves away and the missile takes some time to reach the range where it explodes.
+<p>To get better performances, a robot must estimate the speed of its enemy and then it must fire the missile to a location some step forward the target. The following is the algorithm used by <B>Phalanx</B> and <b>Stinger</b>. It can be divided into four parts:
+<ol>
+<li><b>Speed Estimation</b><br>To calculate the speed of the enemy a robot must use the scanner to take the location of the enemy at different instants. Remember that the main system methods (such as <I>scan()</I>) return integers, so you need to scan locations when some time has elapsed to improve precision.<br>This is the difficult part of the algorithm and I leave it to the reader as an exercise <B>:)</B>
+<p><li><b>Flight Time Computation</b><br>When you have the location and speed of the enemy the training of the cannon is straightforward.
+<br>First of all, the flight of the missile is independent from the speed of the shooting robot (this is explained in the <a href="jjr_info.html#missiles">Info section</a>). The missile always flies at 300&nbsp;m/s,  so we have to forecast the point where a missile flying at such a speed will meet the moving enemy.
+<p>You can find the exact formula to compute the flight time this way:
+<p>Say <b>P</b> (using vector notation) the unknown point in which the missile meets the enemy, <B>R</B> the starting location of your robot, <B>T</B> the starting location of the target and <B>V</B> its velocity.
+<br>The target will reach the point <B>P</B> in <I>t</I> seconds, according to the formula
+<p><b>P</b>&nbsp;=&nbsp;<B>T</B>&nbsp;+&nbsp;<B>V</B>&nbsp;<I>t</I></p>
+The missile will reach the point <B>P</B> in the same time after flying for 300&#183<I>t</I> meters, that is the distance of <B>R</B> from <B>P</B>
+<p>(<b>P</b>&nbsp;-&nbsp;<B>R</B>)<sup>2</sup>&nbsp;=&nbsp;(300&nbsp;<I>t</I>)<sup>2</sup></p>
+Now we have three equations that we can use to find the flight time <I>t</I>.<br>After some algebraic computations we get
+<p><I>t</I>&nbsp;=&nbsp;(&nbsp;sqrt(300<sup>2</sup>&nbsp;<B>D</B><sup>2</sup>&nbsp;-&nbsp;(<B>D</B>x<B>V</B>)<sup>2</sup>)&nbsp;+&nbsp;<B>D</B>&#183<B>V</B>&nbsp;)&nbsp;/&nbsp;(300<sup>2</sup>&nbsp;-&nbsp;<B>V</B><sup>2</sup>)</p>
+where <B>D</B>&nbsp;=&nbsp;<B>T</B>&nbsp;-&nbsp;<B>R</B>, "x" is the cross product of two vectors and "&#183" their dot product.
+<p>If you are not familiar with vector notation, maybe this is clearer
+<p>D<sub>x</sub>&nbsp;=&nbsp;T<sub>x</sub>&nbsp;-&nbsp;R<sub>x</sub>
+<br>D<sub>y</sub>&nbsp;=&nbsp;T<sub>y</sub>&nbsp;-&nbsp;R<sub>y</sub>
+<br><I>t</I>&nbsp;=&nbsp;(&nbsp;sqrt(300<sup>2</sup>&nbsp;(D<sub>x</sub><sup>2</sup>&nbsp;+&nbsp;D<sub>y</sub><sup>2</sup>)&nbsp;-&nbsp;(D<sub>x</sub>V<sub>y</sub>&nbsp;-&nbsp;D<sub>y</sub>V<sub>x</sub>)<sup>2</sup>)&nbsp;+&nbsp;(D<sub>x</sub>V<sub>x</sub>&nbsp;+&nbsp;D<sub>y</sub>V<sub>y</sub>)&nbsp;)&nbsp;/&nbsp;(300<sup>2</sup>&nbsp;-&nbsp;(V<sub>x</sub><sup>2</sup>&nbsp;+&nbsp;V<sub>y</sub><sup>2</sup>)&nbsp;)
+</p>
+<li><b>New Target Computation</b><br>To calculate the target location after the flight time, simply substitute <I>t</I> in the equations of motion of the enemy
+<p><b>P</b>&nbsp;=&nbsp;<B>T</B>&nbsp;+&nbsp;<B>V</B>&nbsp;<I>t</I></p>
+that is
+<p>P<sub>x</sub>&nbsp;=&nbsp;T<sub>x</sub>&nbsp;+&nbsp;V<sub>x</sub>&nbsp;<I>t</I>
+<br>P<sub>y</sub>&nbsp;=&nbsp;T<sub>y</sub>&nbsp;+&nbsp;V<sub>y</sub>&nbsp;<I>t</I></p>
+<li><b>Training the Cannon</b><br>Finally, there is a trivial task: you must compute the arguments of the <I>cannon()</I> method (angle and range) using P<sub>x</sub>, P<sub>y</sub> and the coordinates of your robot.
+</ol>
+<B>That's all, folks!</B> For questions or comments, <A HREF="mailto:boselli@uno.it">send me an email</A>.
+<hr>
+<a name="jjrobot_Platoon"></a>
+<P><font color=yellow><b>Jrobot: Platoon</b> - <font size="-1">Author: <a href="mailto:boselli@uno.it">Leonardo Boselli</a></font></font>
+<p>This is the "making of..." <b>Platoon</b>, which is my first <b>Jrobot</b>. This tutorial may be useful to learn some tricks about <B>Jrobots</B> fights. This robot is really simple and performs better in team matches.
+<p>For more information about <B>Jrobots</B> see the <a href="jjr_info.html">Info section</a>.<br>If you want to write a tutorial about your own robot, <a href="mailto:boselli@uno.it?subject=Jrobots Tutorials&body=The name of my Jrobot is...">send me an email</a>.
+<p>Let's see the source code:
+
+<P><pre>public class __Platoon_ extends JJRobot {
+/*
+</pre>
+The name of every <B>Jrobot</B> must start with two underscores and end with one. Only alphanumeric characters are allowed in the middle. Your class must extend the <i>JJRobot</i> class
+<pre>
+*/
+private static int count;
+/*
+</pre>
+This variable counts the friend robots involved in the fight
+<pre>
+*/
+private static int[] cornerX = {50,950,950,50};
+private static int[] cornerY = {50,50,950,950};
+/*
+</pre>
+These arrays contain values for the path followed by robots
+<pre>
+*/
+private static int targetX = 500;
+private static int targetY = 500;
+/*
+</pre>
+Coordinates of the last target found
+<pre>
+*/
+private static int locX[] = new int[8];
+private static int locY[] = new int[8];
+/*
+</pre>
+Locations of friend robots
+<pre>
+*/
+private static int corner1;
+/*
+</pre>
+First corner chosen
+<pre>
+*/
+private int nCorner;
+private int scan;
+private int id;
+
+void main() {
+  if((id = id()) == 0) {
+    count = 1;
+    corner1 = rand(4);
+  } else {
+    count = id+1;
+  }
+/*
+</pre>
+The latter <I>if-block</I> counts the friend robots and reset static variables when the first robot is created. The built-in <I>id()</I> method returns a number that identifies the order of creation of robots. 
+<pre>
+*/
+  nCorner = corner1;
+  int dx = cornerX[nCorner]-(locX[id]=loc_x());
+  int dy = cornerY[nCorner]-(locY[id]=loc_y());
+  int angle;
+  if(dx == 0) {
+    angle = dy &gt; 0? 90: 270;
+  } else {
+    angle = atan(dy*100000/dx);
+  }
+  if(dx &lt; 0) angle += 180;
+  drive(angle,100);
+/*
+</pre>
+The robot starts a route to the chosen corner
+<pre>
+*/
+  switch(nCorner) {
+    default:
+    case 0: while(locX[id] &gt; 150 || locY[id] &gt; 150) fire2(); break;
+    case 1: while(locX[id] &lt; 850 || locY[id] &gt; 150) fire2(); break;
+    case 2: while(locX[id] &lt; 850 || locY[id] &lt; 850) fire2(); break;
+    case 3: while(locX[id] &gt; 150 || locY[id] &lt; 850) fire2(); break;
+  }
+/*
+</pre>
+In this <I>switch-block</I> the robot fires missiles waiting for the first corner
+<pre>
+*/
+  do {
+    drive(0,0);
+    while(speed() &gt;= 50) fire1();
+/*
+</pre>
+The robot waits for a 50% speed fall firing. Then...
+<pre>
+*/
+    if(++nCorner == 4) nCorner = 0;
+    dx = cornerX[nCorner]-loc_x();
+    dy = cornerY[nCorner]-loc_y();
+    if(dx == 0) {
+      angle = dy &gt; 0? 90: 270;
+    } else {
+      angle = atan(dy*100000/dx);
+    }
+    if(dx &lt; 0) angle += 180;
+    drive(angle,100);
+/*
+</pre>
+... the robot chooses the next corner and...
+<pre>
+*/
+    switch(nCorner) {
+      default:
+      case 0: while(locY[id] &gt; 150) fire1(); break;
+      case 1: while(locX[id] &lt; 850) fire1(); break;
+      case 2: while(locY[id] &lt; 850) fire1(); break;
+      case 3: while(locX[id] &gt; 150) fire1(); break;
+/*
+</pre>
+... it fires missiles waiting for the next corner
+<pre>
+*/
+    }
+  } while(true);
+}
+private void fire1() {
+/*
+</pre>
+In this method the robot scans the side opposite the wall
+<pre>
+*/
+  switch(nCorner) {
+    default:
+    case 0: if(++scan &gt; 470 || scan &lt; 240) scan = 250; break;
+    case 1: if(++scan &gt; 200 || scan &lt; -30) scan = -20; break;
+    case 2: if(++scan &gt; 290 || scan &lt;  60) scan = 70; break;
+    case 3: if(++scan &gt; 380 || scan &lt; 150) scan = 160; break;
+  }
+  fire();
+}
+
+private void fire2() {
+/*
+</pre>
+In this method the robot scans all around
+<pre>
+*/
+  if(++scan &gt; 360) scan = 0;
+  fire();
+}
+
+private void fire() {
+  locX[id] = loc_x();
+  locY[id] = loc_y();
+/*
+</pre>
+The robot updates its location
+<pre>
+*/
+  int range;
+  if((range = scan(scan,1)) &gt; 40 &amp;&amp; range &lt;= 740) {
+/*
+</pre>
+The scanner finds a target
+<pre>
+*/
+    if (count &gt; 1) {
+/*
+</pre>
+The robot is not alone
+<pre>
+*/
+      boolean shot = true;
+      int shotX = locX[id]+range*cos(scan)/100000;
+      int shotY = locY[id]+range*sin(scan)/100000;
+      for(int ct = 0; ct &lt; count; ct++) {
+/*
+</pre>
+Is the target an enemy?
+<pre>
+*/
+        if(ct != id) {
+          int dx = shotX-locX[ct];
+          int dy = shotY-locY[ct];
+          if(dx*dx+dy*dy &lt; 1600) {
+            shot = false;
+            break;
+          }
+        }
+      }
+      if(shot) {
+/*
+</pre>
+Yes, it is an enemy! Fire and notify friend robots about the enemy found
+<pre>
+*/
+        targetX = shotX;
+        targetY = shotY;
+        cannon(scan,range);
+        scan -= 10;
+/*
+</pre>
+Turn back the scanner a bit
+<pre>
+*/
+      } else {
+/*
+</pre>
+No, it is a friend! Fire to the last target found instead
+<pre>
+*/
+        int dx = targetX-locX[id];
+        int dy = targetY-locY[id];
+        int dist2 = dx*dx+dy*dy;
+        if(dist2 &gt; 1600 &amp;&amp; dist2 &lt;= 547600) {
+          int angle;
+          if(dx == 0) {
+            angle = dy &gt; 0? 90: 270;
+          } else {
+            angle = atan(dy*100000/dx);
+            if(dx &lt; 0) angle += 180;
+          }
+          cannon(angle,sqrt(dist2));
+        }
+      }
+    } else {
+/*
+</pre>
+The robot is alone. Don't worry, fire!
+<pre>
+*/
+      cannon(scan,range);
+      scan -= 10;
+    }
+  }
+}
+
+}
+</pre>
+<p>You can find the source code of <b>Platoon</b> in the <a href="http://jrobots.sourceforge.net/downloads.shtml">downloads</a> page.
+<p>For questions or comments, <A HREF="mailto:boselli@uno.it">send me an email</A>.
+
+<hr>
+<a name="PhalanxStinger"></a>
+<P><font color=yellow><b>Jrobot: Phalanx and Stinger</b> - <font size="-1">Author: <a href="mailto:boselli@uno.it">Leonardo Boselli</a></font></font>
+<p><b>Platoon</b> works fine in Team Match, but some robots with strong aiming techniques win against it in Single and Double Match, because its movement if easily foreseeable. To improve the behaviour of <b>Platoon</b>, I've written <b>Phalanx</b> and <b>Stinger</b>.
+
+<p>The best robots use <i>enemy speed tracking</i> to improve damages caused by fired missiles. This technique needs a constant speed to forecast the location of the enemy at the end of the flight of the missile. If the robot moves back and forth, smart enemies are confused, but less smart robots are luck enough to hit it when it changes direction. A better solution is to follow a zigzag path as <b>Phalanx</b> do.
+
+<p><b>Stinger</b> uses the same shooting technique of <b>Phalanx</b>, but it follows a different movement algorithm. It looks for the nearest enemy and follows it like a shadow. When it's really close (less than 40 meters) it always fires missiles towards the enemy at a distance of 45 meters, so it damages the enemy without damaging itself.
+
+<p>Now <b>Phalanx</b> combines the five main fight techniques of the strongest robots. The rules it follows are:
+<ol><li><b>Don't shoot to friends</b>: good for Double and Team play
+<li><b>Keep high speed and change direction quickly</b>: this avoids missiles fired in place
+<li><b>Follow a zigzag path</b>: this avoids missiles fired by smart robots
+<li><b>Run in flocks to join fire power</b>: a real value in Team play
+<li><b>Compute flight time of missiles and rectify the aim to track enemies</b>: good if you want to hit something very hard
+</ol>
+<p><b>Stinger</b> changes rules 3 and 4 with:
+<ol start=3><li><b>Follow the nearest enemy very close</b>: this confuses the enemy
+<li><b>Fire towards the enemy avoiding self damaging</b>: good if the distance is below 40 meters
+</ol>
+
+<p>You can find the source code of <b>Phalanx</b> and <b>Stinger</b> in the <a href="http://jrobots.sourceforge.net/downloads.shtml">downloads</a> page.
+<p>For questions or comments, <A HREF="mailto:boselli@uno.it">send me an email</A>.
+
+</FONT>
+<!--------------------------------------------------->
+<!-------- End of Text. No More changes! ------------>
+<!--------------------------------------------------->
+
+
+</td></tr></table>
+
+ </TD></TR></TABLE>
+
+  </TD></TR>
+
+<!-------------------- FOOTER ---------------------->
+
+
+<TR><TD>
+
+<table border=1 bordercolor="black" cellpadding=5 cellspacing=0 bgcolor=78398D width=100%>
+<tr><td align=center>
+    <TABLE WIDTH=100% CELLPADDING=0 BORDER=0 CELLSPACING=0>
+    <TR><TD width=50% ALIGN=LEFT>
+<font color=white size=1 face=verdana,arial>For more information<BR>send an <A HREF="mailto:tetractys@uno.it">email</A> to<BR><A HREF="http://www.uno.it/utenti/tetractys/">TETRACTYS Software</A></FONT>
+    </TD><TD ALIGN=RIGHT VALIGN=CENTER width=50%>
+<font color=white size=1 face=verdana,arial>Copyright &copy; 1999-2005 <a href="mailto:boselli@uno.it">Leonardo Boselli</a><BR>All Rights Reserved. <a href="copyright.html">Legal Terms</a>.</FONT>
+    </TD></TR>
+    </TABLE>
+
+</td></tr></table>
+
+
+  </TD></TR> 
+  </TABLE>
+</BODY>
+</HTML>
+

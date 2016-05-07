@@ -1,0 +1,444 @@
+<HTML><HEAD>
+
+<TITLE>Leonardo Boselli's JROBOTS</TITLE>
+
+<META NAME="KeyWords" CONTENT="virtual, reality, artificial, intelligence, physics, systems, java, applets, on-line, games"></HEAD>
+
+<BODY Bgcolor="black" Text=#ffffff Link=#ffc00 VLink=#ffc00 ALink=#f1e2f3 
+      topmargin=0 leftmargin=0 rightmargin=0 bottommargin=0>
+
+
+<!--------------- HEADER ------------------------->
+
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR align=left width="100%">
+     <TD align=left><img border=0 
+      src="gfx/titlebg_1.jpg"></td>
+    <TD align=right width="100%" valign=middle background="gfx/titlebg_2.jpg"> </TD></TR></TBODY></TABLE>
+<table border=1 bordercolor="black" cellpadding=0 cellspacing=0 bgcolor=78398D width=100%><tr><td>
+<font color=white size=2 face= verdana,arial><center>Multi-User, Time-Sharing, Real-Time Java Algorithms Challenge</center></font>
+</td></tr></table>
+
+<!--------------- Main Table --------------------->
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=4 HEIGHT=100% WIDTH=100% bgcolor=695246>
+  <TR><TD VALIGN=TOP ALIGN=CENTER>
+
+<!---------------- Menu Table -------------------->
+
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=6 WIDTH=100% height=100%>
+  <TR><TD VALIGN=TOP ALIGN=center WIDTH=150 valign=top height=100%>
+    
+    <TABLE BORDER=0 CELLPADDING=0 WIDTH=150 height=100%>
+<!---------- Start of menu ------------>
+			<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%" height=100%>
+			 <TR valign=bottom><td valign=bottom>
+  			  <table cellpadding=0 border=0 cellspacing=0><tr valign=top><td valign=top><img
+                    src="gfx/menu_top.gif" alt="" width=150></td></tr>
+	    		<tr><td background="gfx/menu_bk.gif">&nbsp;</td></tr></table>
+			 </td</tr> 
+			 <tr height=100%><td background="gfx/menu_bk.gif" valign=top>
+                   <CENTER><FONT face="Arial, Helvetica, Geneva" size=2></center>
+
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_info.html">Info</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_faq.html">FAQ</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_tutorials.html">Tutorials</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://www.onelist.com/group/javajousters">Mailing List</A><br>
+
+<br><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/accounts.shtml">Accounts</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/uploads.shtml">Uploads</A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/downloads.shtml">Downloads</A><br>
+
+<br><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="jjr_match.html"><b>Battle Applet</b></A><br>
+
+&nbsp;&bull;&nbsp;
+<A HREF="http://jrobots.sourceforge.net/jjr_contests.shtml">Challenges</A><br>
+<br><br><center>
+<a href="http://www.jars.com/classes/jresout.cgi?resource=6808"><img src="jars_75.gif" alt="JARS Top 25%" align=center border=0></a><br></center>
+
+</FONT>
+   
+</td></tr>
+			<tr height=100%><td height=100% background="gfx/menu_bk.gif"><br><br>
+                  <img src="gfx/menu_bk.gif" alt="" height=100% width=150></td></tr>
+			<tr valign=top><td valign=top><img src="gfx/menu_bot.gif" alt="" width=150></td>
+                  </tr></table>
+<!---------- End of menu --------->
+
+  </TD>
+
+<!------------------ Text Table ------------------>
+
+
+<TD VALIGN=TOP ALIGN=CENTER>
+
+<TABLE BORDER=1 BGCOLOR="#1F0635" border color="black" cellpadding=8 cellspacing=0><TR><TD>
+
+<!--------------------------------------------------->
+<!-------- Changes should be done here only --------->
+<!--------------------------------------------------->
+
+
+<FONT FACE="verdana,arial" SIZE=-1>
+
+<A NAME="index">
+<P ALIGN=CENTER><FONT COLOR=yellow SIZE=+1>Jrobots Tutorials</FONT><br><center><font size=-1><A HREF="jjr_tutorials.html">[English]</a>&nbsp[Italiano]&nbsp;<A HREF="jjr_tutorialsSpa.html">[Español]</a></font></center>
+
+<hr>
+<ol>
+<li><a href="#aiming">Tecniche di puntamento</a>
+<li><a href="#jjrobot_Platoon">Jrobot: Platoon</a>
+<li><a href="#PhalanxStinger">Jrobot: Phalanx and Stinger</a>
+</ol>
+<hr>
+<a name="aiming"></a>
+<font color=yellow><b>Tecniche di puntamento</b> - <font size="-1">Autore: <a href="mailto:boselli@uno.it">Leonardo Boselli</a></font></font>
+<p>I limiti dei robot forniti come esempio sono evidenti: utilizzano lo scanner per individuare il nemico e sparano un missile verso il punto che hanno trovato. Spesso mancano il bersaglio perch&eacute; il nemico &egrave; in movimento ed il missile impiega un certo tempo per raggiungere la distanza a cui esploder&agrave;
+<p>Per ottenere risultati migliori, un robot deve stimare la velocit&agrave; del suo nemico e sparare il missile verso il punto in cui si trover&agrave; il bersaglio dopo qualche istante. Qui di seguito viene presentato l'algoritmo utilizzato da <B>Phalanx</B>. Pu&ograve; essere suddiviso in quattro parti:
+<ol>
+<li><b>Stima della velocit&agrave;</b><br>Per calcolare la velocit&agrave; del nemico occorre utilizzare lo scanner per individuarne la posizione in istanti differenti. Bisogna ricordare che i metodi di sistema (come <I>scan()</I>) restituiscono valori interi, cos&igrave; &egrave; opportuno che passi un tempo sufficiente tra una lettura e l'altra per  migliorare la precisione.<br>Questa &egrave; la parte pi&ugrave; critica dell'algoritmo e la lascio al lettore come esercizio <B>:)</B>
+<p><li><b>Calcolo del tempo di volo</b><br>Dopo aver stabilito la posizione e la velocit&agrave; del nemico, il puntamento del cannone &egrave; praticamente immediato.
+<br>Prima di tutto, bisogna ricordare che il volo del missile &egrave; indipendente dal moto del robot che lo spara. Il missile viaggia sempre a 300&nbsp;m/s,  cos&igrave; occorre prevedere il punto in cui un missile che viaggia a tale velocit&agrave; incontrer&agrave; il nemico in movimento.
+<p>E' possibile determinare la formula esatta in questo modo:
+<p>Sia <b>P</b> (in notazioni vettoriali) il punto sconosciuto in cui il missile incontrer&agrave; il nemico, <B>R</B> la posizione iniziale del nostro robot, <B>T</B> la posizione iniziale del bersaglio e <B>V</B> la sua velocit&agrave;.
+<br>Il punto <B>P</B> sar&agrave; raggiunto dal bersaglio in <I>t</I> secondi, secondo la formula
+<p><b>P</b>&nbsp;=&nbsp;<B>T</B>&nbsp;+&nbsp;<B>V</B>&nbsp;<I>t</I></p>
+Il punto <B>P</B> sar&agrave; raggiunto dal missile nello stesso tempo, dopo aver percorso 300&#183<I>t</I> metri, che &egrave; la distanza tra <B>T</B> e <B>P</B>
+<p>(<b>P</b>&nbsp;-&nbsp;<B>T</B>)<sup>2</sup>&nbsp;=&nbsp;(300&nbsp;<I>t</I>)<sup>2</sup></p>
+Ora abbiamo tre equazioni che possono essere utilizzate per ricavare il tempo di volo <I>t</I>.<br>Dopo alcuni calcoli algebrici si ottiene
+<p><I>t</I>&nbsp;=&nbsp;(&nbsp;sqrt(300<sup>2</sup>&nbsp;<B>D</B><sup>2</sup>&nbsp;-&nbsp;(<B>D</B>x<B>V</B>)<sup>2</sup>)&nbsp;+&nbsp;<B>D</B>&#183<B>V</B>&nbsp;)&nbsp;/&nbsp;(300<sup>2</sup>&nbsp;-&nbsp;<B>V</B><sup>2</sup>)</p>
+dove <B>D</B>&nbsp;=&nbsp;<B>T</B>&nbsp;-&nbsp;<B>R</B>, "x" &egrave; il prodotto vettoriale e "&#183" il prodotto scalare di due vettori.
+<p>Chi non ha dimestichezza con la notazione vettoriale, pu&ograve; forse comprendere meglio queste formule
+<p>D<sub>x</sub>&nbsp;=&nbsp;T<sub>x</sub>&nbsp;-&nbsp;R<sub>x</sub>
+<br>D<sub>y</sub>&nbsp;=&nbsp;T<sub>y</sub>&nbsp;-&nbsp;R<sub>y</sub>
+<br><I>t</I>&nbsp;=&nbsp;(&nbsp;sqrt(300<sup>2</sup>&nbsp;(D<sub>x</sub><sup>2</sup>&nbsp;+&nbsp;D<sub>y</sub><sup>2</sup>)&nbsp;-&nbsp;(D<sub>x</sub>V<sub>y</sub>&nbsp;-&nbsp;D<sub>y</sub>V<sub>x</sub>)<sup>2</sup>)&nbsp;+&nbsp;(D<sub>x</sub>V<sub>x</sub>&nbsp;+&nbsp;D<sub>y</sub>V<sub>y</sub>)&nbsp;)&nbsp;/&nbsp;(300<sup>2</sup>&nbsp;-&nbsp;(V<sub>x</sub><sup>2</sup>&nbsp;+&nbsp;V<sub>y</sub><sup>2</sup>)&nbsp;)
+</p>
+<li><b>Calcolo della nuova posizione</b><br>Per determinare la nuova posizione del bersaglio, &egrave; possibile sostituire il tempo precedentemente calcolato nelle equazioni del moto del nemico
+<p><b>P</b>&nbsp;=&nbsp;<B>T</B>&nbsp;+&nbsp;<B>V</B>&nbsp;<I>t</I></p>
+cio&egrave;
+<p>P<sub>x</sub>&nbsp;=&nbsp;T<sub>x</sub>&nbsp;+&nbsp;V<sub>x</sub>&nbsp;<I>t</I>
+<br>P<sub>y</sub>&nbsp;=&nbsp;T<sub>y</sub>&nbsp;+&nbsp;V<sub>y</sub>&nbsp;<I>t</I></p>
+<li><b>Puntamento del cannone</b><br>Infine, non rimane che calcolare gli argomenti del metodo <I>cannon()</I> (angolo e distanza) usando P<sub>x</sub>, P<sub>y</sub> e le coordinate del nostro robot.
+</ol>
+<B>E' tutto!</B> Per domande o commenti, <A HREF="mailto:boselli@uno.it">mandami un email</A>.
+
+<hr>
+<a name="jjrobot_Platoon"></a>
+<P><font color=yellow><b>Jrobot: Platoon</b> - <font size="-1">Autore: <a href="mailto:boselli@uno.it">Leonardo Boselli</a></font></font>
+<p>Questo &egrave; il codice sorgente del mio primo robot, <b>Platoon</b>. Pu&ograve; essere utile per imparare alcuni trucchi sui combattimenti tra <B>Jrobots</B>. Questo robot &egrave; molto semplice ed ottiene i migliori risultati nei combattimenti a squadre.
+<p>Per maggiori informazioni su <B>Jrobots</B> vai alla <a href="jjr_infoIta.html">sezione Info</a>.<br>Se vuoi scrivere un tutorial sul tuo robot, <a href="mailto:boselli@uno.it?subject=Jrobots Tutorials&body=The name of my Jrobot is...">mandami un email</a>.
+<p>Vediamo il codice sorgente:
+
+<P><pre>public class __Platoon_ extends JJRobot {
+/*
+</pre>
+Il nome di ogni <B>Jrobot</B> deve iniziare con due <I>underscore</I> e terminare con uno. Nel mezzo sono ammessi solo caratteri alfanumerici. Deve estendere la classe <i>JJRobot</i>
+<pre>
+*/
+private static int count;
+/*
+</pre>
+Questa variabile conta i robot amici presenti nell'arena
+<pre>
+*/
+private static int[] cornerX = {50,950,950,50};
+private static int[] cornerY = {50,50,950,950};
+/*
+</pre>
+Questi array contengono i valori del percorso seguito dal robot
+<pre>
+*/
+private static int targetX = 500;
+private static int targetY = 500;
+/*
+</pre>
+Coordinate dell'ultimo bersaglio individuato
+<pre>
+*/
+private static int locX[] = new int[8];
+private static int locY[] = new int[8];
+/*
+</pre>
+Posizione dei robot amici
+<pre>
+*/
+private static int corner1;
+/*
+</pre>
+Primo angolo scelto
+<pre>
+*/
+private int nCorner;
+private int scan;
+private int id;
+
+void main() {
+  if((id = id()) == 0) {
+    count = 1;
+    corner1 = rand(4);
+  } else {
+    count = id+1;
+  }
+/*
+</pre>
+Nell'ultimo blocco <I>if</I> vengono contati i robot amici e vengono resettate le variabili statiche nel caso si tratti del primo robot creato. Il metodo <I>id()</I> restituisce un numero intero che identifica l'ordine in cui i robot vengono creati 
+<pre>
+*/
+  nCorner = corner1;
+  int dx = cornerX[nCorner]-(locX[id]=loc_x());
+  int dy = cornerY[nCorner]-(locY[id]=loc_y());
+  int angle;
+  if(dx == 0) {
+    angle = dy &gt; 0? 90: 270;
+  } else {
+    angle = atan(dy*100000/dx);
+  }
+  if(dx &lt; 0) angle += 180;
+  drive(angle,100);
+/*
+</pre>
+Il robot comincia ad avvicinarsi all'angolo scelto
+<pre>
+*/
+  switch(nCorner) {
+    default:
+    case 0: while(locX[id] &gt; 150 || locY[id] &gt; 150) fire2(); break;
+    case 1: while(locX[id] &lt; 850 || locY[id] &gt; 150) fire2(); break;
+    case 2: while(locX[id] &lt; 850 || locY[id] &lt; 850) fire2(); break;
+    case 3: while(locX[id] &gt; 150 || locY[id] &lt; 850) fire2(); break;
+  }
+/*
+</pre>
+In questo blocco <I>switch</I> il robot spara missili ed aspetta di raggiungere il primo angolo
+<pre>
+*/
+  do {
+    drive(0,0);
+    while(speed() &gt;= 50) fire1();
+/*
+</pre>
+Il robot aspetta che la velocit&agrave; scenda al 50% e spara a ripetizione. Poi...
+<pre>
+*/
+    if(++nCorner == 4) nCorner = 0;
+    dx = cornerX[nCorner]-loc_x();
+    dy = cornerY[nCorner]-loc_y();
+    if(dx == 0) {
+      angle = dy &gt; 0? 90: 270;
+    } else {
+      angle = atan(dy*100000/dx);
+    }
+    if(dx &lt; 0) angle += 180;
+    drive(angle,100);
+/*
+</pre>
+... sceglie il prossimo angolo e...
+<pre>
+*/
+    switch(nCorner) {
+      default:
+      case 0: while(locY[id] &gt; 150) fire1(); break;
+      case 1: while(locX[id] &lt; 850) fire1(); break;
+      case 2: while(locY[id] &lt; 850) fire1(); break;
+      case 3: while(locX[id] &gt; 150) fire1(); break;
+/*
+</pre>
+... spara missili aspettando di raggiungere l'angolo successivo
+<pre>
+*/
+    }
+  } while(true);
+}
+private void fire1() {
+/*
+</pre>
+In questo metodo il robot sonda la zona dell'arena opposta al muro
+<pre>
+*/
+  switch(nCorner) {
+    default:
+    case 0: if(++scan &gt; 470 || scan &lt; 240) scan = 250; break;
+    case 1: if(++scan &gt; 200 || scan &lt; -30) scan = -20; break;
+    case 2: if(++scan &gt; 290 || scan &lt;  60) scan = 70; break;
+    case 3: if(++scan &gt; 380 || scan &lt; 150) scan = 160; break;
+  }
+  fire();
+}
+
+private void fire2() {
+/*
+</pre>
+In questo metodo il robot sonda l'arena a 360 gradi
+<pre>
+*/
+  if(++scan &gt; 360) scan = 0;
+  fire();
+}
+
+private void fire() {
+  locX[id] = loc_x();
+  locY[id] = loc_y();
+/*
+</pre>
+Il robot aggiorna la sua posizione
+<pre>
+*/
+  int range;
+  if((range = scan(scan,1)) &gt; 40 &amp;&amp; range &lt;= 740) {
+/*
+</pre>
+Lo scanner ha individuato un bersaglio
+<pre>
+*/
+    if (count &gt; 1) {
+/*
+</pre>
+Il robot non &egrave; solo
+<pre>
+*/
+      boolean shot = true;
+      int shotX = locX[id]+range*cos(scan)/100000;
+      int shotY = locY[id]+range*sin(scan)/100000;
+      for(int ct = 0; ct &lt; count; ct++) {
+/*
+</pre>
+Il bersaglio &egrave; un nemico?
+<pre>
+*/
+        if(ct != id) {
+          int dx = shotX-locX[ct];
+          int dy = shotY-locY[ct];
+          if(dx*dx+dy*dy &lt; 1600) {
+            shot = false;
+            break;
+          }
+        }
+      }
+      if(shot) {
+/*
+</pre>
+Si, &egrave; un nemico! Spara e avvisa i robot amici della posizione del nemico individuato 
+<pre>
+*/
+        targetX = shotX;
+        targetY = shotY;
+        cannon(scan,range);
+        scan -= 10;
+/*
+</pre>
+Arretra di 10 gradi l'angolazione dello scanner
+<pre>
+*/
+      } else {
+/*
+</pre>
+No, &egrave; un amico! Spara all'ultimo bersaglio individuato
+<pre>
+*/
+        int dx = targetX-locX[id];
+        int dy = targetY-locY[id];
+        int dist2 = dx*dx+dy*dy;
+        if(dist2 &gt; 1600 &amp;&amp; dist2 &lt;= 547600) {
+          int angle;
+          if(dx == 0) {
+            angle = dy &gt; 0? 90: 270;
+          } else {
+            angle = atan(dy*100000/dx);
+            if(dx &lt; 0) angle += 180;
+          }
+          cannon(angle,sqrt(dist2));
+        }
+      }
+    } else {
+/*
+</pre>
+Il robot &egrave; solo. Fuoco a volont&agrave;
+<pre>
+*/
+      cannon(scan,range);
+      scan -= 10;
+    }
+  }
+}
+
+}
+</pre>
+<p>Per domande o commenti, <A HREF="mailto:boselli@uno.it">mandami un email</A>.
+
+<hr>
+<a name="PhalanxStinger"></a>
+<P><font color=yellow><b>Jrobot: Phalanx and Stinger</b> - <font size="-1">Author: <a href="mailto:boselli@uno.it">Leonardo Boselli</a></font></font>
+<p><b>Platoon</b> si comporta bene soprattutto nei Team Match, ma i robot che usano buone tecniche di puntamento possono batterlo facilmente perch&eacute; i suoi movimenti sono prevedibili. Con lo scopo di scrivere un robot con prestazioni migliori, ho creato <b>Phalanx</b> e <b>Stinger</b>.
+
+<p>I migliori robot calcolano la velocit&agrave; dei nemici per aumentare i danni causati dai missili. Questa tecnica funziona bene quando i nemici mantengono una velocit&agrave; costante; in queste condizioni &egrave; semplice prevedere la posizione del nemico quando il missile giunger&agrave; alla fine della sua corsa. Una possibile contromisura consiste nel far muovere il proprio robot avanti ed indietro; cos&igrave; facendo i robot pi&ugrave; precisi sono ingannati, ma quelli meno intelligenti potrebbero essere abbastanza fortunati da colpire il robot quando cambia direzione. Una soluzione migliore &egrave; sicuramente quella di seguire un percorso a zig-zag come quello di <b>Phalanx</b>.
+
+<p><b>Stinger</b> usa la stessa tecnica di tiro di <b>Phalanx</b>, ma segue un differente algoritmo di movimento. Cerca il nemico pi&ugrave; vicino e lo segue come un'ombra. Quando &egrave; molto vicino (meno di 40 metri), spara ripetutamente verso la sua preda ad una distanza di 45 metri, colpendo cos&igrave; il suo bersaglio senza provocare alcun danno a se stesso.
+
+<p>Attualmente <b>Phalanx</b> combina le cinque tecniche principali utilizzate dai robot pi&ugrave; forti. Le regole che segue sono:
+<ol><li><b>Non sparare agli amici</b>: ottimo per gli incontri Double e Team
+<li><b>Mantieni un'alta velocit&agrave; e cambia direzione rapidamente</b>: questo permette di evitare i missili sparati senza calcoli
+<li><b>Segui un percorso a zig-zag</b>: questo riduce i danni dei missili dei robot pi&ugrave; intelligenti
+<li><b>Corri in branchi per unire la potenza di fuoco</b>: ottimo per gli incontri di tipo Team
+<li><b>Calcola il tempo di volo dei missili per correggere la mira e seguire i nemici</b>: per colpire veramente duro
+</ol>
+<p><b>Stinger</b> sostituisce le regole 3 e 4 con:
+<ol start=3><li><b>Segui il nemico pi&ugrave; vicino</b>: questo confonde gli avversari
+<li><b>Spara sul nemico evitando di auto-danneggiarti</b>: ottimo se la distanza &egrave; inferiore ai 40 metri
+</ol>
+
+<p>Per domande o commenti, <A HREF="mailto:boselli@uno.it">mandami un email</A>.
+
+</FONT>
+<!--------------------------------------------------->
+<!-------- End of Text. No More changes! ------------>
+<!--------------------------------------------------->
+
+
+</td></tr></table>
+
+ </TD></TR></TABLE>
+
+  </TD></TR>
+
+<!-------------------- FOOTER ---------------------->
+
+
+<TR><TD>
+
+<table border=1 bordercolor="black" cellpadding=5 cellspacing=0 bgcolor=78398D width=100%>
+<tr><td align=center>
+    <TABLE WIDTH=100% CELLPADDING=0 BORDER=0 CELLSPACING=0>
+    <TR><TD width=50% ALIGN=LEFT>
+<font color=white size=1 face=verdana,arial>For more information<BR>send an <A HREF="mailto:tetractys@uno.it">email</A> to<BR><A HREF="http://www.uno.it/utenti/tetractys/">TETRACTYS Software</A></FONT>
+    </TD><TD ALIGN=RIGHT VALIGN=CENTER width=50%>
+<font color=white size=1 face=verdana,arial>Copyright &copy; 1999-2005 <a href="mailto:boselli@uno.it">Leonardo Boselli</a><BR>All Rights Reserved. <a href="copyright.html">Legal Terms</a>.</FONT>
+    </TD></TR>
+    </TABLE>
+
+</td></tr></table>
+
+
+  </TD></TR> 
+  </TABLE>
+</BODY>
+</HTML>
+
