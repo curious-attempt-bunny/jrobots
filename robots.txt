@@ -4,3 +4,4 @@ __Sniper_ 0 0 0 0 0 0
 __Rook_ 0 0 0 0 0 0
 __Rabbit_ 0 0 0 0 0 0
 __Bunny0SittingDuck_ 0 0 0 0 0 0
+__Bunny1NaiveShoot_ 0 0 0 0 0 0
